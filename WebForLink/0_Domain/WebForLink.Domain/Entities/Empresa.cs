@@ -26,7 +26,7 @@ namespace WebForLink.Domain.Entities
         public List<Contato> Contatos { get; private set; }
         public List<Documento> Anexos { get; private set; }
         public List<Endereco> Enderecos { get; private set; }
-        public List<Robo> Robos { get; private set; }
+        public Robo Robos { get; private set; }
         public List<Banco> Bancos { get; private set; }
 
         public void SetTipoEmpresa(TipoEmpresa tipoEmpresa)
