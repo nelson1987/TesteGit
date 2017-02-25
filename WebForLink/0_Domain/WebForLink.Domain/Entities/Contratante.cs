@@ -15,6 +15,12 @@ namespace WebForLink.Domain.Entities
             RazaoSocial = razaoSocial;
         }
 
+        public Contratante(string razaoSocial, TipoContratante tipo)
+            : this(razaoSocial)
+        {
+            TipoContratante = tipo;
+        }
+
         public int Id { get; private set; }
         public string RazaoSocial { get; private set; }
         public string Documento { get; private set; }
@@ -24,6 +30,7 @@ namespace WebForLink.Domain.Entities
         public Usuario Criador { get; private set; }
         public List<Empresa> EmpresasCadastradas { get; private set; }
         public List<Usuario> Usuarios { get; private set; }
+        public Empresa DadosGerais { get; private set; }
 
         public void SetCriador(Usuario usuario)
         {
@@ -33,6 +40,16 @@ namespace WebForLink.Domain.Entities
         public void AdicionarEmpresa(Empresa sorteq)
         {
             EmpresasCadastradas.Add(sorteq);
+        }
+
+        public void SetTipo(TipoContratante tipoContratante)
+        {
+            TipoContratante = tipoContratante;
+        }
+
+        public void SetDadosGerais(Empresa empresa)
+        {
+            DadosGerais = empresa;
         }
     }
 }

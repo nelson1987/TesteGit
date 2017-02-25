@@ -8,8 +8,8 @@ namespace WebForLink.Domain.Entities
     {
         protected Usuario()
         {
-
         }
+
         public Usuario(string login)
         {
             Login = login;
@@ -18,11 +18,10 @@ namespace WebForLink.Domain.Entities
         public Usuario(string login, Contratante contratante)
             : this(login)
         {
-            this.Contratante = contratante;
+            Contratante = contratante;
         }
 
         public int Id { get; private set; }
-
         public string Login { get; private set; }
         public Contratante Contratante { get; private set; }
         public Aplicacao Aplicacao { get; private set; }

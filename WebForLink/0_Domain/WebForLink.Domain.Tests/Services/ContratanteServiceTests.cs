@@ -10,7 +10,7 @@ namespace WebForLink.Domain.Tests.Services
         [TestMethod]
         public void IncluirEmpresaRecemAderidaAoWebForLink()
         {
-            var webforlink = new Aplicacao("WebForLink");
+            var webforlink = new Aplicacao("WebForLink", "Cadastro de Fornecedores");
 
             var nelson = new Usuario("nelson.neto");
             var samarco = new Contratante("Samarco");

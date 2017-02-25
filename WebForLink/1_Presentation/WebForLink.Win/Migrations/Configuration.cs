@@ -1,18 +1,16 @@
+using System.Data.Entity.Migrations;
+using WebForLink.Win.Contexto;
+
 namespace WebForLink.Win.Migrations
 {
-    using System;
-    using System.Data.Entity;
-    using System.Data.Entity.Migrations;
-    using System.Linq;
-
-    internal sealed class Configuration : DbMigrationsConfiguration<WebForLink.Win.Contexto.WebForLinkContext>
+    internal sealed class Configuration : DbMigrationsConfiguration<WebForLinkContext>
     {
         public Configuration()
         {
             AutomaticMigrationsEnabled = true;
         }
 
-        protected override void Seed(WebForLink.Win.Contexto.WebForLinkContext context)
+        protected override void Seed(WebForLinkContext context)
         {
             //  This method will be called after migrating to the latest version.
 

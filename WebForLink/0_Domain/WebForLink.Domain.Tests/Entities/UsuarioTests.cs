@@ -1,4 +1,5 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using System.Linq;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 using WebForLink.Domain.Entities;
 
 namespace WebForLink.Domain.Tests.Entities
@@ -22,6 +23,18 @@ namespace WebForLink.Domain.Tests.Entities
             var samarco = new Contratante("Samarco");
             nelson.ContratadoPor(samarco);
             Assert.AreEqual(nelson.Contratante.RazaoSocial, "Samarco");
+        }
+
+        [TestMethod]
+        public void IncluirUsuarioEmUmContratanteEmDuasAplicacoesDiferentes()
+        {
+            var webforlink = new Aplicacao("WebForLink", "Cadastro de Fornecedores");
+            var nelson = new Usuario("nelson.neto");
+            webforlink.AdicionarUsuario(nelson);
+            var samarco = new Contratante("Samarco");
+            nelson.ContratadoPor(samarco);
+            Assert.AreEqual(nelson.Contratante.RazaoSocial, "Samarco");
+            Assert.AreEqual(webforlink.Usuarios.Select(x => x.Contratante).FirstOrDefault(), samarco);
         }
     }
 }

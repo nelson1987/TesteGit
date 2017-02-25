@@ -1,11 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Data.Entity;
 using System.Data.Entity.ModelConfiguration.Conventions;
 using System.Diagnostics;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using WebForLink.Domain.Entities;
 using WebForLink.Win.Banco;
 
@@ -28,7 +24,9 @@ namespace WebForLink.Win.Contexto
         }
 
         public DbSet<Aplicacao> Aplicacao { get; set; }
-        public DbSet<Contratante> Contratantes { get; set; }
+        public DbSet<Contratante> Contratante { get; set; }
+        public DbSet<Usuario> Usuario { get; set; }
+        public DbSet<Solicitacao> Solicitacao { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

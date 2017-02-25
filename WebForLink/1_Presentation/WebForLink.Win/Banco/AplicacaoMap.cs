@@ -3,7 +3,7 @@ using WebForLink.Domain.Entities;
 
 namespace WebForLink.Win.Banco
 {
-    public class AplicacaoMap  : EntityTypeConfiguration<Aplicacao>
+    public class AplicacaoMap : EntityTypeConfiguration<Aplicacao>
     {
         public AplicacaoMap()
         {

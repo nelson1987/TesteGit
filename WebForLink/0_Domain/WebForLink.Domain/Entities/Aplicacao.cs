@@ -9,9 +9,10 @@ namespace WebForLink.Domain.Entities
             Usuarios = new List<Usuario>();
         }
 
-        public Aplicacao(string nome) : this()
+        public Aplicacao(string nome, string descricao) : this()
         {
             Nome = nome;
+            Descricao = descricao;
         }
 
         public int Id { get; private set; }
