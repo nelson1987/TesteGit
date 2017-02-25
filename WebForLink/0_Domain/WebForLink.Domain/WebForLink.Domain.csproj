@@ -47,6 +47,7 @@
     <Compile Include="Entities\ConfiguracaoSistema.cs" />
     <Compile Include="Entities\Contato.cs" />
     <Compile Include="Entities\Contratante.cs" />
+    <Compile Include="Entities\Fornecedor.cs" />
     <Compile Include="Entities\Passo.cs" />
     <Compile Include="Entities\TipoSolicitacao.cs" />
     <Compile Include="Etapa.cs" />

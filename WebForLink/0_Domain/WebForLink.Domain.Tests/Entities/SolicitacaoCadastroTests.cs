@@ -25,7 +25,7 @@ namespace WebForLink.Domain.Tests.Entities
         public void CriarSolicitacaoDeCadastro()
         {
             Solicitacao solicitacaoDeCadastro = new TipoSolicitacaoCadastro(nelson, sorteq);
-            Assert.AreEqual(solicitacaoDeCadastro.Tipo.Descricao, "Cadastro de Fornecedor");
+            Assert.AreEqual(solicitacaoDeCadastro.Tipo.Descricao, "Cadastro de Pessoa Jurídica");
         }
         [TestMethod]
         public void CriarSolicitacaoDeFornecedorComFluxo()

@@ -6,33 +6,39 @@ namespace WebForLink.Domain.Tests.Entities
     [TestClass]
     public class ContratanteTests
     {
+        public Contratante Samarco;
+
+        [TestInitialize]
+        public void SetUp()
+        {
+            Samarco = new Contratante("Samarco");
+        }
+
         [TestMethod]
         public void CriarContratante()
         {
-            var samarco = new Contratante("Samarco");
-            Assert.AreEqual(samarco.RazaoSocial, "Samarco");
-            Assert.AreEqual(samarco.EmpresasCadastradas.Count, 0);
+            Assert.AreEqual(Samarco.RazaoSocial, "Samarco");
+            Assert.AreEqual(Samarco.EmpresasCadastradas.Count, 0);
         }
 
         [TestMethod]
         public void AdicionarEmpresaAUmContratante()
         {
-            var samarco = new Contratante("Samarco");
-            var sorteq = new Empresa("Sorteq", "12345678900", new TipoEmpresa("Fornecedor"));
-            Assert.AreEqual(samarco.EmpresasCadastradas.Count, 0);
-            samarco.AdicionarEmpresa(sorteq);
-            Assert.AreEqual(samarco.EmpresasCadastradas.Count, 1);
+            Empresa sorteq = new Fornecedor("Sorteq", "12345678900", new TipoEmpresa("Fornecedor"));
+            Assert.AreEqual(Samarco.EmpresasCadastradas.Count, 0);
+            Samarco.AdicionarEmpresa(sorteq);
+            Assert.AreEqual(Samarco.EmpresasCadastradas.Count, 1);
         }
 
         [TestMethod]
         public void ValidarEmpresaContratanteEFornecedorIndividual()
         {
             var fornecedorIndividual = new TipoContratante("Fornecedor Individual");
-            var samarco = new Contratante("Samarco", fornecedorIndividual);
-            var samarcoDados = new Empresa("Samarco", "12345678900", new TipoEmpresa("Fornecedor"));
-            samarco.SetDadosGerais(samarcoDados);
-            Assert.AreEqual(samarco.DadosGerais.RazaoSocial, samarcoDados.RazaoSocial);
-            Assert.AreEqual(samarco.TipoContratante.Nome, "Fornecedor Individual");
+            Samarco = new Contratante("Samarco", fornecedorIndividual);
+            Empresa samarcoDados = new Cliente("Samarco", "12345678900", new TipoEmpresa("Fornecedor"));
+            Samarco.SetDadosGerais(samarcoDados);
+            Assert.AreEqual(Samarco.DadosGerais.RazaoSocial, samarcoDados.RazaoSocial);
+            Assert.AreEqual(Samarco.TipoContratante.Nome, "Fornecedor Individual");
         }
 
         [TestMethod]
