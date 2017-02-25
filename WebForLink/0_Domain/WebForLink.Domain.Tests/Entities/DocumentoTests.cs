@@ -17,7 +17,7 @@ namespace WebForLink.Domain.Tests.Entities
         public void AdicionarDocumentoParaUmaEmpresa()
         {
             var carteiraDeHabilitacao = new Documento("CNH - Carteira Nacional de Habilitação");
-            var sorteq = new Empresa("Sorteq", "12345678900");
+            var sorteq = new Empresa("Sorteq", "12345678900", new TipoEmpresa("Fornecedor"));
             sorteq.AdicionarDocumento(carteiraDeHabilitacao);
             Assert.AreEqual(sorteq.Anexos.Count, 1);
             Assert.AreEqual(carteiraDeHabilitacao.Arquivos.Count, 0);

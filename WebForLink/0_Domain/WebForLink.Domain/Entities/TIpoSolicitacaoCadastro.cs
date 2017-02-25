@@ -1,11 +1,17 @@
-﻿namespace WebForLink.Domain.Entities
+﻿using System;
+
+namespace WebForLink.Domain.Entities
 {
     public class TipoSolicitacaoCadastro : Solicitacao
     {
-        public TipoSolicitacaoCadastro(Usuario nelson, Empresa sorteq)
-            : base(nelson, sorteq)
+        public TipoSolicitacaoCadastro(Usuario criador, Empresa solicitado)
+            : base(criador, solicitado)
         {
-            SetTipo(new TipoSolicitacao("Cadastro de Empresa"));
+            string tipoDeEmpresa = "Empresa";
+            if (solicitado.Tipo != null)
+                if (!string.IsNullOrEmpty(solicitado.Tipo.Nome))
+                    tipoDeEmpresa = solicitado.Tipo.Nome;
+            SetTipo(new TipoSolicitacao(String.Format("Cadastro de {0}", tipoDeEmpresa)));
         }
     }
 }

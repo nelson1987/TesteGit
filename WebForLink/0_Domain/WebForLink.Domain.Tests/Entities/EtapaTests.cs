@@ -10,7 +10,7 @@ namespace WebForLink.Domain.Tests.Entities
         {
             var etapa = new Etapa("Solicitação");
             Assert.AreEqual(etapa.Passos.Count, 0);
-            Assert.AreNotEqual(etapa.Nome, "Solicitação");
+            Assert.AreEqual(etapa.Nome, "Solicitação");
         }
     }
 }

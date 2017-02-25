@@ -11,10 +11,11 @@ namespace WebForLink.Domain.Entities
             Anexos = new List<Documento>();
         }
 
-        public Empresa(string razaoSocial, string documento) : this()
+        public Empresa(string razaoSocial, string documento, TipoEmpresa tipo) : this()
         {
             RazaoSocial = razaoSocial;
             Documento = documento;
+            Tipo = tipo;
         }
 
         public int Id { get; private set; }

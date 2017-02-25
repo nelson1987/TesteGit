@@ -14,8 +14,8 @@ namespace WebForLink.Domain.Tests.Entities
         [TestInitialize]
         public void SetUp()
         {
-            empresa = new Empresa("Nova Empresa", "1234567890001");
             pessoaJuridica = new TipoEmpresa("Pessoa Jurídica");
+            empresa = new Empresa("Nova Empresa", "1234567890001", pessoaJuridica);
             contratante = new Contratante("Zamarco");
             statusEmpresa = new StatusEmpresa("Ativo");
         }
