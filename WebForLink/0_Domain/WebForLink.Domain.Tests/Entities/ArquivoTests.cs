@@ -19,7 +19,7 @@ namespace WebForLink.Domain.Tests.Entities
             var file = new Arquivo("index.html");
             var carteiraDeHabilitacao = new Documento("Carteira de Habilitação");
             carteiraDeHabilitacao.AdicionarArquivo(file);
-            Assert.AreEqual(carteiraDeHabilitacao.Arquivos, 1);
+            Assert.AreEqual(carteiraDeHabilitacao.Arquivos.Count, 1);
         }
     }
 }

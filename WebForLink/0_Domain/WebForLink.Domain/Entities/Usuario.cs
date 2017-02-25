@@ -6,9 +6,19 @@ namespace WebForLink.Domain.Entities
 {
     public class Usuario
     {
+        protected Usuario()
+        {
+
+        }
         public Usuario(string login)
         {
             Login = login;
+        }
+
+        public Usuario(string login, Contratante contratante)
+            : this(login)
+        {
+            this.Contratante = contratante;
         }
 
         public int Id { get; private set; }
