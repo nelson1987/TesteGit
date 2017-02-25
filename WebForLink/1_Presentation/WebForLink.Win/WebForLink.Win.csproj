@@ -67,6 +67,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Banco\AplicacaoMap.cs" />
+    <Compile Include="Banco\UsuarioMap.cs" />
     <Compile Include="Contexto\WebForLinkContext.cs" />
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Program.cs" />

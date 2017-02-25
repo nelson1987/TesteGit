@@ -35,7 +35,7 @@ namespace WebForLink.Domain.Tests.Entities
         {
             var fornecedorIndividual = new TipoContratante("Fornecedor Individual");
             Samarco = new Contratante("Samarco", fornecedorIndividual);
-            Empresa samarcoDados = new Cliente("Samarco", "12345678900", new TipoEmpresa("Fornecedor"));
+            Cliente samarcoDados = new Cliente("Samarco", "12345678900", new TipoEmpresa("Fornecedor"));
             Samarco.SetDadosGerais(samarcoDados);
             Assert.AreEqual(Samarco.DadosGerais.RazaoSocial, samarcoDados.RazaoSocial);
             Assert.AreEqual(Samarco.TipoContratante.Nome, "Fornecedor Individual");
@@ -46,7 +46,7 @@ namespace WebForLink.Domain.Tests.Entities
         {
             var clienteAncora = new TipoContratante("Cliente Ancora");
             var samarco = new Contratante("Samarco", clienteAncora);
-            var samarcoDados = new Empresa("Samarco", "12345678900", new TipoEmpresa("Fornecedor"));
+            Cliente samarcoDados = new Cliente("Samarco", "12345678900", new TipoEmpresa("Fornecedor"));
             samarco.SetDadosGerais(samarcoDados);
             Assert.AreEqual(samarco.DadosGerais.RazaoSocial, samarcoDados.RazaoSocial);
             Assert.AreEqual(samarco.TipoContratante.Nome, "Cliente Ancora");

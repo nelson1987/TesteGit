@@ -1,5 +1,4 @@
-﻿using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using WebForLink.Domain.Entities;
 
 namespace WebForLink.Domain.Tests.Entities
@@ -8,9 +7,9 @@ namespace WebForLink.Domain.Tests.Entities
     public class SolicitacaoCadastroTests
     {
         private Usuario nelson;
+        private TipoEmpresa pessoaJuridica;
         private Contratante samarco;
         private Empresa sorteq;
-        private TipoEmpresa pessoaJuridica;
 
         [TestInitialize]
         public void SetUp()
@@ -27,16 +26,17 @@ namespace WebForLink.Domain.Tests.Entities
             Solicitacao solicitacaoDeCadastro = new TipoSolicitacaoCadastro(nelson, sorteq);
             Assert.AreEqual(solicitacaoDeCadastro.Tipo.Descricao, "Cadastro de Pessoa Jurídica");
         }
+
         [TestMethod]
         public void CriarSolicitacaoDeFornecedorComFluxo()
         {
             Solicitacao solicitacaoDeCadastro = new TipoSolicitacaoCadastro(nelson, sorteq);
             var cadastroFornecedor = new TipoFluxo("Cadastro de Fornecedor");
-            Fluxo cadastroDeFornecedor = new Fluxo(cadastroFornecedor, samarco, pessoaJuridica);
+            var cadastroDeFornecedor = new Fluxo(cadastroFornecedor, samarco, pessoaJuridica);
             solicitacaoDeCadastro.Tipo.SetFluxo(cadastroDeFornecedor);
             cadastroDeFornecedor.AdicionarEtapas(new Etapa("Solicitacao"), new Etapa("MDA"), new Etapa("Conclusão"));
             Assert.AreEqual(cadastroDeFornecedor.EtapaAtual.Nome, "Solicitacao");
-            Assert.AreEqual(solicitacaoDeCadastro.Tipo.Fluxo.EtapaAtual.Nome,"Solicitacao");
+            Assert.AreEqual(solicitacaoDeCadastro.Tipo.Fluxo.EtapaAtual.Nome, "Solicitacao");
         }
     }
 }

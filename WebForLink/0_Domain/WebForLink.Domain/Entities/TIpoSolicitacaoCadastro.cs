@@ -7,7 +7,7 @@ namespace WebForLink.Domain.Entities
         public TipoSolicitacaoCadastro(Usuario criador, Empresa solicitado)
             : base(criador, solicitado)
         {
-            string tipoDeEmpresa = "Empresa";
+            var tipoDeEmpresa = "Empresa";
             if (solicitado.Tipo != null)
                 if (!string.IsNullOrEmpty(solicitado.Tipo.Nome))
                     tipoDeEmpresa = solicitado.Tipo.Nome;

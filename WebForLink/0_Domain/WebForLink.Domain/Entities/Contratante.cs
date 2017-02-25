@@ -47,7 +47,7 @@ namespace WebForLink.Domain.Entities
             TipoContratante = tipoContratante;
         }
 
-        public void SetDadosGerais(Empresa empresa)
+        public void SetDadosGerais(Cliente empresa)
         {
             DadosGerais = empresa;
         }

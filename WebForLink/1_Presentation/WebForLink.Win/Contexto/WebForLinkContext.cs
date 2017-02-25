@@ -39,11 +39,15 @@ namespace WebForLink.Win.Contexto
             modelBuilder.Conventions.Remove<ManyToManyCascadeDeleteConvention>(); //Deletar em cascata
 
             modelBuilder.Properties()
-                //.Where(p => p.Name.StartsWith("Id"))
                 .Where(p => p.Name.Equals("Id"))
                 .Configure(p => p.IsKey());
 
+            modelBuilder.Properties<string>()
+                .Configure(p => p.HasColumnType(columnType: "varchar")
+                    .HasMaxLength(255));
+
             modelBuilder.Configurations.Add(new AplicacaoMap());
+            modelBuilder.Configurations.Add(new UsuarioMap());
         }
     }
 }

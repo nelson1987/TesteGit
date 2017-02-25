@@ -15,7 +15,7 @@ namespace WebForLink.Domain.Entities
             Nome = nome;
         }
 
-        public Fluxo(TipoFluxo tipo, Contratante contratante, TipoEmpresa tipoEmpresa):this()
+        public Fluxo(TipoFluxo tipo, Contratante contratante, TipoEmpresa tipoEmpresa) : this()
         {
             TipoFluxo = tipo;
             Contratante = contratante;
@@ -28,7 +28,9 @@ namespace WebForLink.Domain.Entities
         public TipoEmpresa TipoEmpresa { get; private set; }
         public Contratante Contratante { get; private set; }
         public List<Etapa> Etapas { get; set; }
-        public Etapa EtapaAtual {
+
+        public Etapa EtapaAtual
+        {
             get { return Etapas.FirstOrDefault(x => !x.Aprovado); }
         }
 

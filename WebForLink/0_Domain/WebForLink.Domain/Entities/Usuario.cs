@@ -26,32 +26,32 @@ namespace WebForLink.Domain.Entities
         public Contratante Contratante { get; private set; }
         public Aplicacao Aplicacao { get; private set; }
 
-        public List<Empresa> VisualizarFornecedores
-        {
-            get
-            {
-                if (Contratante == null)
-                    throw new Exception("O usuário deve ter um contratante atrelado a ele.");
+        //public List<Empresa> VisualizarFornecedores
+        //{
+        //    get
+        //    {
+        //        if (Contratante == null)
+        //            throw new Exception("O usuário deve ter um contratante atrelado a ele.");
 
-                return Contratante
-                    .EmpresasCadastradas
-                    .ToList();
-            }
-        }
+        //        return Contratante
+        //            .EmpresasCadastradas
+        //            .ToList();
+        //    }
+        //}
 
-        public List<Empresa> VisualizarFornecedoresCadastrados
-        {
-            get
-            {
-                if (Contratante == null)
-                    throw new Exception("O usuário deve ter um contratante atrelado a ele.");
+        //public List<Empresa> VisualizarFornecedoresCadastrados
+        //{
+        //    get
+        //    {
+        //        if (Contratante == null)
+        //            throw new Exception("O usuário deve ter um contratante atrelado a ele.");
 
-                return Contratante
-                    .EmpresasCadastradas
-                    .Where(x => x.Status == new StatusEmpresa("Ativo"))
-                    .ToList();
-            }
-        }
+        //        return Contratante
+        //            .EmpresasCadastradas
+        //            .Where(x => x.Status == new StatusEmpresa("Ativo"))
+        //            .ToList();
+        //    }
+        //}
 
         public void ContratadoPor(Contratante contratante)
         {

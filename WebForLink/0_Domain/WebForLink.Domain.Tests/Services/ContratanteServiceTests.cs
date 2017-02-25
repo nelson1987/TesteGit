@@ -16,8 +16,8 @@ namespace WebForLink.Domain.Tests.Services
             var samarco = new Contratante("Samarco");
             var statusEmpresa = new StatusEmpresa("Ativo");
             nelson.ContratadoPor(samarco);
-            var fornecedores = nelson.VisualizarFornecedores;
-            var fornecedoresAtivos = nelson.VisualizarFornecedoresCadastrados;
+            //var fornecedores = nelson.VisualizarFornecedores;
+            //var fornecedoresAtivos = nelson.VisualizarFornecedoresCadastrados;
 
             //Empresa fornecedor = nelson.Contratante
 
