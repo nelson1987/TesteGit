@@ -27,15 +27,15 @@ namespace WebForLink.Domain.Entities
         public TipoContratante TipoContratante { get; private set; }
         public TipoEmpresa TipoEmpresa { get; private set; }
         public List<ConfiguracaoSistema> ConfiguracaoSistemas { get; private set; }
-        public Usuario Criador { get; private set; }
+        //public Usuario Criador { get; private set; }
         public List<Empresa> EmpresasCadastradas { get; private set; }
         public List<Usuario> Usuarios { get; private set; }
         public Cliente DadosGerais { get; private set; }
 
-        public void SetCriador(Usuario usuario)
-        {
-            Criador = usuario;
-        }
+        //public void SetCriador(Usuario usuario)
+        //{
+        //    Criador = usuario;
+        //}
 
         public void AdicionarEmpresa(Empresa sorteq)
         {

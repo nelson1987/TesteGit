@@ -6,7 +6,7 @@ namespace WebForLink.Domain.Services
     {
         public IncluirContratanteService(Usuario usuario, Contratante contratante)
         {
-            contratante.SetCriador(usuario);
+            //contratante.SetCriador(usuario);
             //contratante.TipoEmpresa;
         }
 

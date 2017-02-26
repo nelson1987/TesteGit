@@ -2,10 +2,12 @@
 {
     public class Fornecedor : Empresa
     {
+
         public Fornecedor(string razaoSocial, string documento, TipoEmpresa tipo)
             : base(razaoSocial, documento, tipo)
         {
         }
+        
     }
 
     public class Cliente : Empresa

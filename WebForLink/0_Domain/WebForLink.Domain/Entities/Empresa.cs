@@ -2,7 +2,7 @@
 
 namespace WebForLink.Domain.Entities
 {
-    public class Empresa
+    public abstract class Empresa
     {
         protected Empresa()
         {
@@ -10,14 +10,12 @@ namespace WebForLink.Domain.Entities
             Contratantes = new List<Contratante>();
             Anexos = new List<Documento>();
         }
-
-        public Empresa(string razaoSocial, string documento, TipoEmpresa tipo) : this()
+        protected Empresa(string razaoSocial, string documento, TipoEmpresa tipo) : this()
         {
             RazaoSocial = razaoSocial;
             Documento = documento;
             Tipo = tipo;
         }
-
         public int Id { get; private set; }
         public string RazaoSocial { get; private set; }
         public string Documento { get; private set; }
