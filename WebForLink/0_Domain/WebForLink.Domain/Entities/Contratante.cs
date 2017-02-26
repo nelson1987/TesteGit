@@ -3,7 +3,7 @@ using WebForLink.Domain.Entities.Tipos;
 
 namespace WebForLink.Domain.Entities
 {
-    public class Contratante
+    public abstract class Contratante
     {
         private Contratante()
         {
@@ -11,17 +11,15 @@ namespace WebForLink.Domain.Entities
             Solicitacoes = new List<Solicitacao>();
         }
 
-        public Contratante(string razaoSocial, TipoContratante tipo)
+        protected Contratante(string razaoSocial)
             : this()
         {
             RazaoSocial = razaoSocial;
-            TipoContratante = tipo;
         }
 
         public int Id { get; private set; }
         public string RazaoSocial { get; private set; }
         public string Documento { get; private set; }
-        public TipoContratante TipoContratante { get; private set; }
         public TipoEmpresa TipoEmpresa { get; private set; }
         public Cliente DadosGerais { get; private set; }
         public List<ConfiguracaoSistema> ConfiguracaoSistemas { get; private set; }
@@ -37,11 +35,6 @@ namespace WebForLink.Domain.Entities
         public void AdicionarEmpresa(Empresa sorteq)
         {
             EmpresasCadastradas.Add(sorteq);
-        }
-
-        public void SetTipo(TipoContratante tipoContratante)
-        {
-            TipoContratante = tipoContratante;
         }
 
         public void SetDadosGerais(Cliente empresa)

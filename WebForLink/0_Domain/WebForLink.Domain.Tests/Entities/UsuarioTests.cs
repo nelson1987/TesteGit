@@ -16,7 +16,7 @@ namespace WebForLink.Domain.Tests.Entities
         public void SetUp()
         {
             _webForLink = new Aplicacao("WebForLink", "Cadastro de Fornecedores");
-            _samarco = new Contratante("Samarco", new ClienteContratante());
+            _samarco = new ClienteAncora("Samarco");
             _nelson = new Usuario("nelson.neto", _webForLink, _samarco);
         }
 
@@ -30,8 +30,8 @@ namespace WebForLink.Domain.Tests.Entities
         public void IncluirUsuarioEmUmContratante()
         {
             var nelson = new Usuario("nelson.neto", new Aplicacao("WebForLink", ""),
-                new Contratante("", new ClienteContratante()));
-            var samarco = new Contratante("Samarco", new ClienteContratante());
+                new ClienteAncora(""));
+            var samarco = new ClienteAncora("Samarco");
             nelson.SetContratante(samarco);
             Assert.AreEqual(nelson.Contratante.RazaoSocial, "Samarco");
         }

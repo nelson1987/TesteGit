@@ -2,38 +2,38 @@
 
 namespace WebForLink.Domain.Entities.Tipos
 {
-    public abstract class TipoContratante
-    {
-        private TipoContratante()
-        {
-        }
+    //public abstract class TipoContratante
+    //{
+    //    private TipoContratante()
+    //    {
+    //    }
 
-        protected TipoContratante(string nome)
-            : this()
-        {
-            Nome = nome;
-        }
+    //    protected TipoContratante(string nome)
+    //        : this()
+    //    {
+    //        Nome = nome;
+    //    }
 
-        /*
-        protected TipoContratante(int id, string nome)
-            : this(nome)
-        {
-            Id = id;
-            Nome = nome;
-        }
-        */
-        public int Id { get; private set; }
-        public string Nome { get; private set; }
-        public List<Contratante> Contratantes { get; private set; }
-    }
+    //    /*
+    //    protected TipoContratante(int id, string nome)
+    //        : this(nome)
+    //    {
+    //        Id = id;
+    //        Nome = nome;
+    //    }
+    //    */
+    //    public int Id { get; private set; }
+    //    public string Nome { get; private set; }
+    //    public List<Contratante> Contratantes { get; private set; }
+    //}
 
     /// <summary>
     ///     Cliente Âncora
     /// </summary>
-    public class ClienteContratante : TipoContratante
+    public class ClienteAncora : Contratante
     {
-        public ClienteContratante()
-            : base("Cliente Âncora")
+        public ClienteAncora(string razaoSocial) 
+            : base(razaoSocial)
         {
         }
     }
@@ -41,10 +41,10 @@ namespace WebForLink.Domain.Entities.Tipos
     /// <summary>
     ///     Fornecedor Individual
     /// </summary>
-    public class FornecedorContratante : TipoContratante
+    public class FornecedorIndividual : Contratante
     {
-        public FornecedorContratante()
-            : base("Fornecedor Individual")
+        public FornecedorIndividual(string razaoSocial)
+            : base(razaoSocial)
         {
         }
     }
@@ -52,10 +52,10 @@ namespace WebForLink.Domain.Entities.Tipos
     /// <summary>
     ///     Fabricante Âncora
     /// </summary>
-    public class FabricanteContratante : TipoContratante
+    public class FabricanteAncora : Contratante
     {
-        public FabricanteContratante()
-            : base("Fabricante")
+        public FabricanteAncora(string razaoSocial)
+            : base(razaoSocial)
         {
         }
     }

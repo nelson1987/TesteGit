@@ -12,7 +12,7 @@ namespace WebForLink.Domain.Tests.Entities
         [TestInitialize]
         public void SetUp()
         {
-            Samarco = new Contratante("Samarco", new ClienteContratante());
+            Samarco = new ClienteAncora("Samarco");
         }
 
         [TestMethod]
@@ -35,25 +35,22 @@ namespace WebForLink.Domain.Tests.Entities
         [TestMethod]
         public void ValidarEmpresaContratanteEFornecedorIndividual()
         {
-            TipoContratante fornecedorIndividual = new FornecedorContratante();
-            Samarco = new Contratante("Samarco", fornecedorIndividual);
+            Samarco = new ClienteAncora("Samarco");
             var samarcoDados = new Cliente("Samarco", "12345678900", new EmpressaPessoaJuridica());
             //new TipoEmpresa("Fornecedor"));
             Samarco.SetDadosGerais(samarcoDados);
             Assert.AreEqual(Samarco.DadosGerais.RazaoSocial, samarcoDados.RazaoSocial);
-            Assert.AreEqual(Samarco.TipoContratante.Nome, "Fornecedor Individual");
+            //Assert.AreEqual(Samarco, "Fornecedor Individual");
         }
 
         [TestMethod]
         public void ValidarEmpresaContratanteEClienteAncora()
         {
-            TipoContratante clienteAncora = new ClienteContratante();
-            var samarco = new Contratante("Samarco", clienteAncora);
+            var samarco = new ClienteAncora("Samarco");
             var samarcoDados = new Cliente("Samarco", "12345678900", new EmpressaPessoaJuridica());
             //new TipoEmpresa("Fornecedor"));
             samarco.SetDadosGerais(samarcoDados);
             Assert.AreEqual(samarco.DadosGerais.RazaoSocial, samarcoDados.RazaoSocial);
-            Assert.AreEqual(samarco.TipoContratante.Nome, "Cliente Âncora");
         }
     }
 }

@@ -19,7 +19,7 @@ namespace WebForLink.Domain.Tests.Entities
         public void IncluirUsuarioNaAplicacao()
         {
             var webforlink = new Aplicacao("WebForLink", "Cadastro de Fornecedores");
-            var nelsonNeto = new Usuario("nelson.neto", webforlink, new Contratante("Samarco", new ClienteContratante()));
+            var nelsonNeto = new Usuario("nelson.neto", webforlink, new ClienteAncora("Samarco"));
             webforlink.AdicionarUsuario(nelsonNeto);
             Assert.AreEqual(webforlink.Usuarios.Count, 1);
         }
@@ -28,7 +28,7 @@ namespace WebForLink.Domain.Tests.Entities
         public void CopiarUsuarioDeUmaAplicacaoParaOutra()
         {
             var webforlink = new Aplicacao("WebForLink", "Cadastro de Fornecedores");
-            var nelsonNeto = new Usuario("nelson.neto", webforlink, new Contratante("Samarco", new ClienteContratante()));
+            var nelsonNeto = new Usuario("nelson.neto", webforlink, new ClienteAncora("Samarco"));
 
             Assert.AreEqual(webforlink.Usuarios.Count, 0);
 

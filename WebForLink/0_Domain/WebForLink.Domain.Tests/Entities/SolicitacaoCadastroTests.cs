@@ -17,7 +17,7 @@ namespace WebForLink.Domain.Tests.Entities
         public void SetUp()
         {
             _webForLink = new Aplicacao("WebForLink", "Cadastro de Fornecedores");
-            _samarco = new Contratante("Samarco", new ClienteContratante());
+            _samarco = new ClienteAncora("Samarco");
             _nelson = new Usuario("nelson.neto", _webForLink, _samarco);
             _pessoaJuridica = new EmpressaPessoaJuridica(); //new TipoEmpresa("Pessoa Jurídica");
             _sorteq = new Fornecedor("Sorteq", "12345678900", _pessoaJuridica);
@@ -34,8 +34,7 @@ namespace WebForLink.Domain.Tests.Entities
         public void CriarSolicitacaoDeFornecedorComFluxo()
         {
             var webForLink = new Aplicacao("WebForLink", "Cadastro De Fornecedores");
-            TipoContratante clienteAncora = new ClienteContratante();
-            var samarco = new Contratante("Samarco", clienteAncora);
+            var samarco = new ClienteAncora("Samarco");
             var nelson = new Usuario("nelson", webForLink, samarco);
             TipoEmpresa pessoaJuridica = new EmpressaPessoaJuridica();
             Empresa sorteq = new Fornecedor("Sorteq", "12345678900", pessoaJuridica);

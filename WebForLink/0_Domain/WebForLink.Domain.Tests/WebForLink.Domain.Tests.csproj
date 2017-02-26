@@ -66,6 +66,7 @@
     <Compile Include="Entities\SolicitacaoCadastroTests.cs" />
     <Compile Include="Entities\PerfilTests.cs" />
     <Compile Include="Entities\UsuarioTests.cs" />
+    <Compile Include="Services\AplicacaoServiceTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\WebForLink.Domain\WebForLink.Domain.csproj">
@@ -75,7 +76,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Properties\" />
-    <Folder Include="Services\" />
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
