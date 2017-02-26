@@ -8,26 +8,26 @@ namespace WebForLink.Domain.Tests.Entities
     [TestClass]
     public class EmpresaTests
     {
-        private Contratante contratante;
-        private Empresa empresa;
-        private TipoEmpresa pessoaJuridica;
-        private StatusEmpresa statusEmpresa;
+        private Contratante _contratante;
+        private Empresa _empresa;
+        private TipoEmpresa _pessoaJuridica;
+        private StatusEmpresa _statusEmpresa;
 
         [TestInitialize]
         public void SetUp()
         {
-            pessoaJuridica = new TipoEmpresa("Pessoa Jurídica");
-            empresa = new Fornecedor("Nova Empresa", "1234567890001", pessoaJuridica);
-            contratante = new Contratante("Zamarco");
-            statusEmpresa = new StatusEmpresa("Ativo");
+            _pessoaJuridica = new EmpressaPessoaJuridica();//new TipoEmpresa("Pessoa Jurídica");
+            _empresa = new Fornecedor("Nova Empresa", "1234567890001", _pessoaJuridica);
+            _contratante = new Contratante("Zamarco");
+            _statusEmpresa = new StatusEmpresa("Ativo");
         }
 
         [TestMethod]
         public void CriarEmpresa()
         {
-            empresa.SetTipoEmpresa(pessoaJuridica);
-            empresa.Contratantes.Add(contratante);
-            empresa.SetStatusEmpresa(statusEmpresa);
+            _empresa.SetTipoEmpresa(_pessoaJuridica);
+            _empresa.Contratantes.Add(_contratante);
+            _empresa.SetStatusEmpresa(_statusEmpresa);
         }
     }
 }

@@ -19,21 +19,21 @@ namespace WebForLink.Domain.Tests.Entities
             _webForLink = new Aplicacao("WebForLink", "Cadastro de Fornecedores");
             _samarco = new Contratante("Samarco");
             _nelson = new Usuario("nelson.neto", _webForLink, _samarco);
-            _pessoaJuridica = new TipoEmpresa("Pessoa Jurídica");
+            _pessoaJuridica = new EmpressaPessoaJuridica();//new TipoEmpresa("Pessoa Jurídica");
             _sorteq = new Fornecedor("Sorteq", "12345678900", _pessoaJuridica);
         }
 
         [TestMethod]
         public void CriarSolicitacaoDeCadastro()
         {
-            Solicitacao solicitacaoDeCadastro = new TipoSolicitacaoCadastro(_nelson, _sorteq);
+            Solicitacao solicitacaoDeCadastro = new SolicitacaoCadastro(_nelson, _sorteq);
             Assert.AreEqual(solicitacaoDeCadastro.Tipo.Descricao, "Cadastro de Pessoa Jurídica");
         }
 
         [TestMethod]
         public void CriarSolicitacaoDeFornecedorComFluxo()
         {
-            Solicitacao solicitacaoDeCadastro = new TipoSolicitacaoCadastro(_nelson, _sorteq);
+            Solicitacao solicitacaoDeCadastro = new SolicitacaoCadastro(_nelson, _sorteq);
             var cadastroFornecedor = new TipoFluxo("Cadastro de Fornecedor");
             var cadastroDeFornecedor = new Fluxo(cadastroFornecedor, _samarco, _pessoaJuridica);
             solicitacaoDeCadastro.Tipo.SetFluxo(cadastroDeFornecedor);

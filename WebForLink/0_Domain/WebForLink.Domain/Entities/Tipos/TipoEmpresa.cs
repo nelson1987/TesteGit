@@ -2,27 +2,41 @@
 
 namespace WebForLink.Domain.Entities.Tipos
 {
-    public class TipoEmpresa
+    public abstract class TipoEmpresa
     {
-        protected TipoEmpresa()
+        private TipoEmpresa()
         {
         }
 
-        public TipoEmpresa(string nome)
+        protected TipoEmpresa(string nome)
             : this()
         {
             Nome = nome;
         }
-
-        public TipoEmpresa(int id, string nome)
-            : this(nome)
-        {
-            Id = id;
-            Nome = nome;
-        }
-
         public int Id { get; private set; }
         public string Nome { get; private set; }
         public List<Contratante> Contratantes { get; private set; }
+    }
+
+    public class EmpressaPessoaJuridica : TipoEmpresa
+    {
+        public EmpressaPessoaJuridica()
+            : base("Pessoa Jurídica")
+        {
+        }
+    }
+    public class EmpressaPessoaFisica : TipoEmpresa
+    {
+        public EmpressaPessoaFisica()
+            : base("Pessoa Física")
+        {
+        }
+    }
+    public class EmpresaEstrangeira : TipoEmpresa
+    {
+        public EmpresaEstrangeira()
+            : base("Estrangeira")
+        {
+        }
     }
 }

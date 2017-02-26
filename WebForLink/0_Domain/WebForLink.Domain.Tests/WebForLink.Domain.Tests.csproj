@@ -65,6 +65,7 @@
     <Compile Include="Entities\EtapaTests.cs" />
     <Compile Include="Entities\SolicitacaoCadastroTests.cs" />
     <Compile Include="Entities\PerfilTests.cs" />
+    <Compile Include="Entities\UnitTest1.cs" />
     <Compile Include="Entities\UsuarioTests.cs" />
     <Compile Include="Services\ContratanteServiceTests.cs" />
   </ItemGroup>

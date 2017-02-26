@@ -11,7 +11,8 @@ namespace WebForLink.Domain.Entities
             Perfis = new List<Perfil>();
         }
 
-        public Aplicacao(string nome, string descricao) : this()
+        public Aplicacao(string nome, string descricao)
+            : this()
         {
             Nome = nome;
             Descricao = descricao;
@@ -36,6 +37,11 @@ namespace WebForLink.Domain.Entities
         public bool TemEssePerfil(Perfil perfil)
         {
             return Perfis.Any(x => x == perfil);
+        }
+
+        public int TotalSolicitacoes
+        {
+            get { return Usuarios.Sum(x => x.Contratante.Solicitacoes.Count); }
         }
     }
 }

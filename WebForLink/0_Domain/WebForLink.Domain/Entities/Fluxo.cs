@@ -6,7 +6,7 @@ namespace WebForLink.Domain.Entities
 {
     public class Fluxo
     {
-        protected Fluxo()
+        private Fluxo()
         {
             Etapas = new List<Etapa>();
         }

@@ -21,7 +21,7 @@ namespace WebForLink.Domain.Entities
     public class Fabricante : Empresa
     {
         public Fabricante(string razaoSocial, string documento)
-            : base(razaoSocial, documento, new TipoEmpresa("Pessoa Jurídica"))
+            : base(razaoSocial, documento, new EmpressaPessoaJuridica())
         {
         }
     }
