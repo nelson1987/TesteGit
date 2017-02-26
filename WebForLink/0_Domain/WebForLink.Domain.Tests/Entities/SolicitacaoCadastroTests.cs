@@ -6,33 +6,35 @@ namespace WebForLink.Domain.Tests.Entities
     [TestClass]
     public class SolicitacaoCadastroTests
     {
-        private Usuario nelson;
-        private TipoEmpresa pessoaJuridica;
-        private Contratante samarco;
-        private Empresa sorteq;
+        private Aplicacao _webForLink;
+        private Usuario _nelson;
+        private TipoEmpresa _pessoaJuridica;
+        private Contratante _samarco;
+        private Empresa _sorteq;
 
         [TestInitialize]
         public void SetUp()
         {
-            samarco = new Contratante("Samarco");
-            nelson = new Usuario("nelson.neto", samarco);
-            pessoaJuridica = new TipoEmpresa("Pessoa Jurídica");
-            sorteq = new Empresa("Sorteq", "12345678900", pessoaJuridica);
+            _webForLink = new Aplicacao("WebForLink", "Cadastro de Fornecedores");
+            _samarco = new Contratante("Samarco");
+            _nelson = new Usuario("nelson.neto", _webForLink, _samarco);
+            _pessoaJuridica = new TipoEmpresa("Pessoa Jurídica");
+            _sorteq = new Fornecedor("Sorteq", "12345678900", _pessoaJuridica);
         }
 
         [TestMethod]
         public void CriarSolicitacaoDeCadastro()
         {
-            Solicitacao solicitacaoDeCadastro = new TipoSolicitacaoCadastro(nelson, sorteq);
+            Solicitacao solicitacaoDeCadastro = new TipoSolicitacaoCadastro(_nelson, _sorteq);
             Assert.AreEqual(solicitacaoDeCadastro.Tipo.Descricao, "Cadastro de Pessoa Jurídica");
         }
 
         [TestMethod]
         public void CriarSolicitacaoDeFornecedorComFluxo()
         {
-            Solicitacao solicitacaoDeCadastro = new TipoSolicitacaoCadastro(nelson, sorteq);
+            Solicitacao solicitacaoDeCadastro = new TipoSolicitacaoCadastro(_nelson, _sorteq);
             var cadastroFornecedor = new TipoFluxo("Cadastro de Fornecedor");
-            var cadastroDeFornecedor = new Fluxo(cadastroFornecedor, samarco, pessoaJuridica);
+            var cadastroDeFornecedor = new Fluxo(cadastroFornecedor, _samarco, _pessoaJuridica);
             solicitacaoDeCadastro.Tipo.SetFluxo(cadastroDeFornecedor);
             cadastroDeFornecedor.AdicionarEtapas(new Etapa("Solicitacao"), new Etapa("MDA"), new Etapa("Conclusão"));
             Assert.AreEqual(cadastroDeFornecedor.EtapaAtual.Nome, "Solicitacao");

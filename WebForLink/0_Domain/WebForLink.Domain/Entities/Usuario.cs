@@ -10,13 +10,18 @@ namespace WebForLink.Domain.Entities
         {
         }
 
-        public Usuario(string login)
+        public Usuario(string login) : this()
         {
             Login = login;
         }
+        public Usuario(string login, Aplicacao aplicacao) : this(login)
+        {
+            Login = login;
+            Aplicacao = aplicacao;
+        }
 
-        public Usuario(string login, Contratante contratante)
-            : this(login)
+        public Usuario(string login, Aplicacao aplicacao, Contratante contratante)
+            : this(login, aplicacao)
         {
             Contratante = contratante;
         }

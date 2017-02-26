@@ -48,6 +48,8 @@ namespace WebForLink.Win.Contexto
 
             modelBuilder.Configurations.Add(new AplicacaoMap());
             modelBuilder.Configurations.Add(new UsuarioMap());
+            modelBuilder.Configurations.Add(new EmpresaMap());
+
         }
     }
 }

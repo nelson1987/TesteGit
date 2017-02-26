@@ -10,8 +10,9 @@ namespace WebForLink.Domain.Tests.Entities
         [TestMethod]
         public void CriarUsuario()
         {
+            var aplicacao = new Aplicacao("WebForLink", "Cadastro de Fornecedores");
             var samarco = new Contratante("Samarco");
-            var nelson = new Usuario("nelson.neto", samarco);
+            var nelson = new Usuario("nelson.neto", aplicacao, samarco);
             Assert.AreEqual(nelson.Login, "nelson.neto");
             //Assert.AreEqual(nelson.VisualizarFornecedores.Count, 0);
         }

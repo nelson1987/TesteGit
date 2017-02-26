@@ -6,9 +6,7 @@ namespace WebForLink.Domain.Entities
     {
         protected Empresa()
         {
-            Contatos = new List<Contato>();
             Contratantes = new List<Contratante>();
-            Anexos = new List<Documento>();
         }
         protected Empresa(string razaoSocial, string documento, TipoEmpresa tipo) : this()
         {
@@ -22,17 +20,12 @@ namespace WebForLink.Domain.Entities
         public TipoEmpresa Tipo { get; private set; }
         public StatusEmpresa Status { get; private set; }
         public List<Contratante> Contratantes { get; private set; }
-        public List<Contato> Contatos { get; private set; }
-        public List<Documento> Anexos { get; private set; }
-        public List<Endereco> Enderecos { get; private set; }
-        public Robo Robos { get; private set; }
-        public List<Banco> Bancos { get; private set; }
+        public FichaCadastral FichaCadastral { get; private set; }
 
         public void SetTipoEmpresa(TipoEmpresa tipoEmpresa)
         {
             Tipo = tipoEmpresa;
         }
-
         public void SetStatusEmpresa(StatusEmpresa statusEmpresa)
         {
             Status = statusEmpresa;
@@ -40,12 +33,12 @@ namespace WebForLink.Domain.Entities
 
         public void AdicionarContato(Contato contato)
         {
-            Contatos.Add(contato);
+            FichaCadastral.Contatos.Add(contato);
         }
 
         public void AdicionarDocumento(Documento documento)
         {
-            Anexos.Add(documento);
+            FichaCadastral.Anexos.Add(documento);
         }
     }
 }
