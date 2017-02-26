@@ -1,374 +1,409 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ClassDiagram MajorVersion="1" MinorVersion="1">
-  <Class Name="WebForLink.Domain.Entities.Aplicacao" Collapsed="true">
-    <Position X="7.75" Y="1.25" Width="1.5" />
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
+  <Class Name="WebForLink.Domain.Entities.Aplicacao">
+    <Position X="19.75" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAACAAAAAAABAAAAAQAAAAAAAAAAAAAEAAAAAQEAAgE=</HashCode>
       <FileName>Entities\Aplicacao.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="WebForLink.Domain.Entities.Fluxo" Collapsed="true">
-    <Position X="4" Y="3" Width="1.5" />
+  <Class Name="WebForLink.Domain.Entities.Fluxo">
+    <Position X="21.5" Y="8" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAECAAAAAAAAAEAABwAAAAIAAAAAAAAAAAAIAAEAAAg=</HashCode>
       <FileName>Entities\Fluxo.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="WebForLink.Domain.Entities.Fornecedor" Collapsed="true">
-    <Position X="2.25" Y="6.75" Width="1.5" />
+  <Class Name="WebForLink.Domain.Entities.Fornecedor">
+    <Position X="2.75" Y="20" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Entities\Fornecedor.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="WebForLink.Domain.Entities.Cliente" Collapsed="true">
-    <Position X="0.5" Y="6.75" Width="1.5" />
+  <Class Name="WebForLink.Domain.Entities.Cliente">
+    <Position X="0.5" Y="20" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Entities\Fornecedor.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="WebForLink.Domain.Entities.Fabricante" Collapsed="true">
-    <Position X="4" Y="6.75" Width="1.5" />
+  <Class Name="WebForLink.Domain.Entities.Fabricante">
+    <Position X="5" Y="20" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Entities\Fornecedor.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="WebForLink.Domain.Entities.GrupoContratante" Collapsed="true">
-    <Position X="11" Y="3.75" Width="1.5" />
+  <Class Name="WebForLink.Domain.Entities.GrupoContratante">
+    <Position X="23.25" Y="8" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Entities\GrupoContratante.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="WebForLink.Domain.Entities.Material" Collapsed="true">
-    <Position X="7.25" Y="1.75" Width="1.5" />
+  <Class Name="WebForLink.Domain.Entities.Material">
+    <Position X="25" Y="8" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Entities\Material.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="WebForLink.Domain.Entities.Arquivo" Collapsed="true">
-    <Position X="3.25" Y="0.5" Width="1.5" />
+  <Class Name="WebForLink.Domain.Entities.Arquivo">
+    <Position X="21.5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAACAAAAAAAAgAAAAAAAAAgAAAAAQAACAAAAAAEAAAQ=</HashCode>
       <FileName>Entities\Arquivo.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="WebForLink.Domain.Entities.Banco" Collapsed="true">
-    <Position X="7.25" Y="3.75" Width="1.5" />
+  <Class Name="WebForLink.Domain.Entities.Banco">
+    <Position X="23.25" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAACAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAA=</HashCode>
       <FileName>Entities\Banco.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="WebForLink.Domain.Entities.ConfiguracaoSistema" Collapsed="true">
-    <Position X="5.5" Y="3.75" Width="1.5" />
+  <Class Name="WebForLink.Domain.Entities.ConfiguracaoSistema">
+    <Position X="21.5" Y="3.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAACEAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Entities\ConfiguracaoSistema.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="WebForLink.Domain.Entities.Contato" Collapsed="true">
-    <Position X="5.5" Y="1.75" Width="1.5" />
+  <Class Name="WebForLink.Domain.Entities.Contato">
+    <Position X="23.25" Y="3.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>ABACAAAAgCAAAAAAAAAAAAAAAAAAAAAAAAAAAAkAAAA=</HashCode>
       <FileName>Entities\Contato.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="WebForLink.Domain.Entities.Contratante" Collapsed="true">
-    <Position X="6.25" Y="0.5" Width="1.5" />
+  <Class Name="WebForLink.Domain.Entities.Contratante">
+    <Position X="25" Y="3.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>YAACCAAAAAAAAAAAAAAAAAIAEAAQAAECAAABAGAAAgA=</HashCode>
       <FileName>Entities\Contratante.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="WebForLink.Domain.Entities.Documento" Collapsed="true">
-    <Position X="8.5" Y="0.5" Width="1.5" />
+  <Class Name="WebForLink.Domain.Entities.Documento">
+    <Position X="26.75" Y="3.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>ABACAAIAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAEAAAA=</HashCode>
       <FileName>Entities\Documento.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="WebForLink.Domain.Entities.Empresa" Collapsed="true">
-    <Position X="2.25" Y="5.5" Width="1.5" />
+  <Class Name="WebForLink.Domain.Entities.Empresa">
+    <Position X="2.75" Y="15.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAACAAAEAAAAAAAABIAQAAAAGAAAAAACAAIAAAAAEAQ=</HashCode>
+      <HashCode>AAACAAAEAAAAAAAgBIAQAAAAGAAAAAACAAIAAAAAEAQ=</HashCode>
       <FileName>Entities\Empresa.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="WebForLink.Domain.Entities.Endereco" Collapsed="true">
-    <Position X="7.5" Y="2" Width="1.5" />
+  <Class Name="WebForLink.Domain.Entities.Endereco">
+    <Position X="19.75" Y="8" Width="1.5" />
     <TypeIdentifier>
       <HashCode>ABACAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Entities\Endereco.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="WebForLink.Domain.Entities.FichaCadastral" Collapsed="true">
-    <Position X="15.25" Y="2.25" Width="1.5" />
+  <Class Name="WebForLink.Domain.Entities.FichaCadastral">
+    <Position X="14.75" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAADAAAAAAAAAAAAAAAAAAAIAAgAAAAAAAAAAAAIEAI=</HashCode>
       <FileName>Entities\FichaCadastral.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="WebForLink.Domain.Entities.Papel" Collapsed="true">
-    <Position X="3.75" Y="1.5" Width="1.5" />
+  <Class Name="WebForLink.Domain.Entities.Papel">
+    <Position X="26.75" Y="8" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAgA=</HashCode>
       <FileName>Entities\Papel.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="WebForLink.Domain.Entities.Passo" Collapsed="true">
-    <Position X="5.5" Y="2.75" Width="1.5" />
+  <Class Name="WebForLink.Domain.Entities.Passo">
+    <Position X="19.75" Y="11.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAACAAAAgAABAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAA=</HashCode>
       <FileName>Entities\Passo.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="WebForLink.Domain.Entities.Perfil" Collapsed="true">
-    <Position X="7.25" Y="2.75" Width="1.5" />
+  <Class Name="WebForLink.Domain.Entities.Perfil">
+    <Position X="21.5" Y="11.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAgA=</HashCode>
       <FileName>Entities\Perfil.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="WebForLink.Domain.Entities.Robo" Collapsed="true">
-    <Position X="3" Y="2.25" Width="1.5" />
+  <Class Name="WebForLink.Domain.Entities.Robo">
+    <Position X="5.5" Y="5.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAACAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Entities\Robo.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="WebForLink.Domain.Entities.RoboCorreios" Collapsed="true">
-    <Position X="0.75" Y="3.5" Width="1.5" />
+  <Class Name="WebForLink.Domain.Entities.RoboCorreios">
+    <Position X="0.75" Y="8.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Entities\RoboCorreios.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="WebForLink.Domain.Entities.RoboReceitaFederal" Collapsed="true">
-    <Position X="0.75" Y="1.25" Width="1.5" />
+  <Class Name="WebForLink.Domain.Entities.RoboReceitaFederal">
+    <Position X="7.5" Y="8.25" Width="1.75" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Entities\RoboReceitaFederal.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="WebForLink.Domain.Entities.RoboSimplesNacional" Collapsed="true">
-    <Position X="0.75" Y="2" Width="1.5" />
+  <Class Name="WebForLink.Domain.Entities.RoboSimplesNacional">
+    <Position X="10" Y="8.25" Width="1.75" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Entities\RoboSimplesNacional.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="WebForLink.Domain.Entities.RoboSintegra" Collapsed="true">
-    <Position X="0.75" Y="0.5" Width="1.5" />
+  <Class Name="WebForLink.Domain.Entities.RoboSintegra">
+    <Position X="3" Y="8.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Entities\RoboSintegra.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="WebForLink.Domain.Entities.RoboSuframa" Collapsed="true">
-    <Position X="0.75" Y="2.75" Width="1.5" />
+  <Class Name="WebForLink.Domain.Entities.RoboSuframa">
+    <Position X="5.25" Y="8.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Entities\RoboSuframa.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="WebForLink.Domain.Entities.Servico" Collapsed="true">
-    <Position X="3.75" Y="3.75" Width="1.5" />
+  <Class Name="WebForLink.Domain.Entities.Servico">
+    <Position X="25" Y="11.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Entities\Servico.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="WebForLink.Domain.Entities.Solicitacao" Collapsed="true">
-    <Position X="16.25" Y="6.75" Width="1.5" />
+  <Class Name="WebForLink.Domain.Entities.Solicitacao">
+    <Position X="8.25" Y="15.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AQASAgAAEAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAgAA=</HashCode>
       <FileName>Entities\Solicitacao.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="WebForLink.Domain.Entities.Usuario" Collapsed="true">
-    <Position X="11" Y="2.75" Width="1.5" />
+  <Class Name="WebForLink.Domain.Entities.Usuario">
+    <Position X="26.75" Y="15.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AgACAAAAAAAAAAAABQAAAAAAAAAAAAAABAAQAAAAAAE=</HashCode>
+      <HashCode>AgACAAAAAAAAgAAABQAAAAAAAAAAAAAABAAQAAAAAAE=</HashCode>
       <FileName>Entities\Usuario.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="WebForLink.Domain.Entities.Tipos.TipoUnspsc" Collapsed="true">
-    <Position X="10.25" Y="0.5" Width="1.5" />
+  <Class Name="WebForLink.Domain.Entities.Tipos.TipoUnspsc">
+    <Position X="25" Y="15.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAACAAAAAQABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Entities\Tipos\TipoUnspsc.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="WebForLink.Domain.Entities.Tipos.SolicitacaoCadastro" Collapsed="true">
-    <Position X="16.25" Y="5.75" Width="1.5" />
+  <Class Name="WebForLink.Domain.Entities.Tipos.SolicitacaoCadastro">
+    <Position X="8.25" Y="19.25" Width="1.75" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Entities\Tipos\SolicitacaoCadastro.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="WebForLink.Domain.Entities.Tipos.TipoContratante" Collapsed="true">
-    <Position X="13" Y="6.25" Width="1.5" />
+  <Class Name="WebForLink.Domain.Entities.Tipos.TipoContratante">
+    <Position X="12.25" Y="10.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAACAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAEAAAA=</HashCode>
       <FileName>Entities\Tipos\TipoContratante.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="WebForLink.Domain.Entities.Tipos.ClienteContratante" Collapsed="true">
-    <Position X="13" Y="7.5" Width="1.5" />
+  <Class Name="WebForLink.Domain.Entities.Tipos.ClienteContratante">
+    <Position X="12" Y="13.5" Width="1.75" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Entities\Tipos\TipoContratante.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="WebForLink.Domain.Entities.Tipos.FornecedorContratante" Collapsed="true">
-    <Position X="15" Y="7.5" Width="1.5" />
+  <Class Name="WebForLink.Domain.Entities.Tipos.FornecedorContratante">
+    <Position X="14.5" Y="13.5" Width="2" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Entities\Tipos\TipoContratante.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="WebForLink.Domain.Entities.Tipos.FabricanteContratante" Collapsed="true">
-    <Position X="11.25" Y="7.5" Width="1.5" />
+  <Class Name="WebForLink.Domain.Entities.Tipos.FabricanteContratante">
+    <Position X="9.5" Y="13.5" Width="1.75" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Entities\Tipos\TipoContratante.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="WebForLink.Domain.Entities.Tipos.TipoEmpresa" Collapsed="true">
-    <Position X="7.5" Y="6.25" Width="1.5" />
+  <Class Name="WebForLink.Domain.Entities.Tipos.TipoEmpresa">
+    <Position X="3.25" Y="10.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAACAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAEAAAA=</HashCode>
       <FileName>Entities\Tipos\TipoEmpresa.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="WebForLink.Domain.Entities.Tipos.EmpressaPessoaJuridica" Collapsed="true">
-    <Position X="5.75" Y="7.5" Width="1.5" />
+  <Class Name="WebForLink.Domain.Entities.Tipos.EmpressaPessoaJuridica">
+    <Position X="0.5" Y="13.5" Width="2" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Entities\Tipos\TipoEmpresa.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="WebForLink.Domain.Entities.Tipos.EmpressaPessoaFisica" Collapsed="true">
-    <Position X="7.5" Y="7.5" Width="1.5" />
+  <Class Name="WebForLink.Domain.Entities.Tipos.EmpressaPessoaFisica">
+    <Position X="3.25" Y="13.5" Width="1.75" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Entities\Tipos\TipoEmpresa.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="WebForLink.Domain.Entities.Tipos.EmpresaEstrangeira" Collapsed="true">
-    <Position X="9.25" Y="7.5" Width="1.5" />
+  <Class Name="WebForLink.Domain.Entities.Tipos.EmpresaEstrangeira">
+    <Position X="5.75" Y="13.5" Width="1.75" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Entities\Tipos\TipoEmpresa.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="WebForLink.Domain.Entities.Tipos.TipoFluxo" Collapsed="true">
-    <Position X="10.25" Y="6.5" Width="1.5" />
+  <Class Name="WebForLink.Domain.Entities.Tipos.TipoFluxo">
+    <Position X="5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAA=</HashCode>
       <FileName>Entities\Tipos\TipoFluxo.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="WebForLink.Domain.Entities.Tipos.FluxoCriacao" Collapsed="true">
-    <Position X="14.25" Y="5.25" Width="1.5" />
+  <Class Name="WebForLink.Domain.Entities.Tipos.FluxoCriacao">
+    <Position X="9.5" Y="3.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Entities\Tipos\TipoFluxo.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="WebForLink.Domain.Entities.Tipos.FluxoAlteracao" Collapsed="true">
-    <Position X="7.25" Y="5.25" Width="1.5" />
+  <Class Name="WebForLink.Domain.Entities.Tipos.FluxoAlteracao">
+    <Position X="0.5" Y="3.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Entities\Tipos\TipoFluxo.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="WebForLink.Domain.Entities.Tipos.FluxoExclusao" Collapsed="true">
-    <Position X="9" Y="5.25" Width="1.5" />
+  <Class Name="WebForLink.Domain.Entities.Tipos.FluxoExclusao">
+    <Position X="2.75" Y="3.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Entities\Tipos\TipoFluxo.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="WebForLink.Domain.Entities.Tipos.FluxoExpansao" Collapsed="true">
-    <Position X="12.5" Y="5.25" Width="1.5" />
+  <Class Name="WebForLink.Domain.Entities.Tipos.FluxoExpansao">
+    <Position X="7.25" Y="3.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Entities\Tipos\TipoFluxo.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="WebForLink.Domain.Entities.Tipos.FluxoCustomizado" Collapsed="true">
-    <Position X="10.75" Y="5.25" Width="1.5" />
+  <Class Name="WebForLink.Domain.Entities.Tipos.FluxoCustomizado">
+    <Position X="5" Y="3.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Entities\Tipos\TipoFluxo.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="WebForLink.Domain.Entities.Tipos.TipoSolicitacao" Collapsed="true">
-    <Position X="15.5" Y="0.5" Width="1.5" />
+  <Class Name="WebForLink.Domain.Entities.Tipos.TipoSolicitacao">
+    <Position X="23.25" Y="15.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAACAgAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAA=</HashCode>
       <FileName>Entities\Tipos\TipoSolicitacao.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="WebForLink.Domain.Entities.Status.StatusSolicitacao" Collapsed="true">
-    <Position X="9.5" Y="3.25" Width="1.5" />
+  <Class Name="WebForLink.Domain.Entities.Status.StatusSolicitacao">
+    <Position X="21.5" Y="15.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAA=</HashCode>
       <FileName>Entities\Status\StatusSolicitacao.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="WebForLink.Domain.Entities.Status.StatusEmpresa" Collapsed="true">
-    <Position X="9.5" Y="2.25" Width="1.5" />
+  <Class Name="WebForLink.Domain.Entities.Status.StatusEmpresa">
+    <Position X="26.75" Y="11.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAACAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAA=</HashCode>
       <FileName>Entities\Status\StatusEmpresa.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="WebForLink.Domain.Entities.Status.StatusPreCadastro" Collapsed="true">
-    <Position X="11.25" Y="2.25" Width="1.5" />
+  <Class Name="WebForLink.Domain.Entities.Status.StatusPreCadastro">
+    <Position X="19.75" Y="15.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAA=</HashCode>
       <FileName>Entities\Status\StatusPreCadastro.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="WebForLink.Domain.Entities.Categorias.CategoriaEmpresaCh" Collapsed="true">
-    <Position X="12" Y="1.5" Width="1.5" />
+  <Class Name="WebForLink.Domain.Entities.Categorias.CategoriaEmpresaCh">
+    <Position X="26.75" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAA=</HashCode>
       <FileName>Entities\Categorias\CategoriaEmpresaCh.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="WebForLink.Domain.Entities.Categorias.CategoriaEmpresa" Collapsed="true">
-    <Position X="10.25" Y="1.5" Width="1.5" />
+  <Class Name="WebForLink.Domain.Entities.Categorias.CategoriaEmpresa">
+    <Position X="25" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAACAAAAAQABAQAABAAAAAAAAAAAAAAAEAAAAAAAAAA=</HashCode>
+      <HashCode>AAACAAAAAQABAQAABAEAAAAAAAAAAAAAEAAAAAAAAAA=</HashCode>
       <FileName>Entities\Categorias\CategoriaEmpresa.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="WebForLink.Domain.Entities.FichaCadastralCompartilhada" Collapsed="true">
-    <Position X="13" Y="3.75" Width="1.5" />
+  <Class Name="WebForLink.Domain.Entities.FichaCompartilhada">
+    <Position X="12.5" Y="4.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAE=</HashCode>
+      <FileName>Entities\FichaCadastral.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WebForLink.Domain.Entities.FichaEmpresa">
+    <Position X="15" Y="4.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Entities\FichaCadastral.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="WebForLink.Domain.Entities.FichaCadastralEmpresaBase" Collapsed="true">
-    <Position X="17.5" Y="3.75" Width="1.5" />
+  <Class Name="WebForLink.Domain.Entities.Compartilhamento">
+    <Position X="19.75" Y="3.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAgCAAAAAAEAAAAAAAAAAAAAGAAAAAAAAAAEAAAAAAA=</HashCode>
+      <FileName>Entities\Compartilhamento.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WebForLink.Domain.Entities.FichaPreCadastro">
+    <Position X="17.25" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Entities\FichaCadastral.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="WebForLink.Domain.Entities.FichaCadastralEmpresa" Collapsed="true">
-    <Position X="15.25" Y="3.75" Width="1.5" />
+  <Class Name="WebForLink.Domain.Entities.Importacao" Collapsed="true">
+    <Position X="14.75" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAEAA=</HashCode>
+      <FileName>Entities\Importacao.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WebForLink.Domain.Entities.ImportacaoEmpresa" Collapsed="true">
+    <Position X="13.25" Y="7.75" Width="1.75" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Entities\FichaCadastral.cs</FileName>
+      <FileName>Entities\Importacao.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WebForLink.Domain.Entities.ImportacaoFabricante" Collapsed="true">
+    <Position X="15.75" Y="7.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Entities\Importacao.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WebForLink.Domain.Entities.PreCadastro">
+    <Position X="23.25" Y="11.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAEAAAAAAAgBIAQAAAAGAAAAAACAAIAAAAAEAQ=</HashCode>
+      <FileName>Entities\PreCadastro.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Font Name="Segoe UI" Size="9" />

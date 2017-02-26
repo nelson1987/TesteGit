@@ -5,15 +5,15 @@ using WebForLink.Domain.Entities.Tipos;
 
 namespace WebForLink.Domain.Entities
 {
-    public abstract class Empresa
+    public abstract class PreCadastro
     {
-        private Empresa()
+        private PreCadastro()
         {
             Contratantes = new List<Contratante>();
             FichaCadastral = new FichaEmpresa();
         }
 
-        protected Empresa(string razaoSocial, string documento, TipoEmpresa tipo)
+        protected PreCadastro(string razaoSocial, string documento, TipoEmpresa tipo)
             : this()
         {
             RazaoSocial = razaoSocial;

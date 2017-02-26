@@ -2,7 +2,7 @@
 {
     public class CategoriaEmpresa
     {
-        protected CategoriaEmpresa()
+        private CategoriaEmpresa()
         {
         }
 
@@ -13,19 +13,12 @@
             Descricao = descricao;
         }
 
-        public CategoriaEmpresa(int id, string codigo, string descricao)
-            : this(codigo, descricao)
-        {
-            Id = id;
-            Codigo = codigo;
-            Descricao = descricao;
-        }
-
         public int Id { get; private set; }
         public string Codigo { get; private set; }
         public string Descricao { get; private set; }
         public CategoriaEmpresa CategoriaPai { get; private set; }
         public CategoriaEmpresaCh CategoriaCh { get; private set; }
         public Contratante Contratante { get; private set; }
+        public bool Ativo { get; private set; }
     }
 }

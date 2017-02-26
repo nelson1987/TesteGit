@@ -29,7 +29,7 @@ namespace WebForLink.Domain.Entities
     /// <summary>
     ///     Ficha Cadastral enviada em Compartilhamento
     /// </summary>
-    public class FichaCadastralCompartilhada : FichaCadastral
+    public class FichaCompartilhada : FichaCadastral
     {
         public List<string> ListaEmail { get; private set; }
     }
@@ -37,15 +37,15 @@ namespace WebForLink.Domain.Entities
     /// <summary>
     ///     Ficha Cadastral de Empresa não saneada pelo sistema
     /// </summary>
-    public class FichaCadastralEmpresaBase : FichaCadastral
+    public class FichaPreCadastro : FichaCadastral
     {
-        public Arquivo Importacao { get; private set; }
+        public Importacao Importacao { get; private set; }
     }
 
     /// <summary>
     ///     Ficha Cadastral Comum das empresas do sistema
     /// </summary>
-    public class FichaCadastralEmpresa : FichaCadastral
+    public class FichaEmpresa : FichaCadastral
     {
     }
 }

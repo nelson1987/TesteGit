@@ -19,7 +19,7 @@ namespace WebForLink.Domain.Tests.Entities
         {
             var pauloDaSorteq = new Contato("Paulo", "nelson.neto@hotmail.com", "21 3456-7890", "21 93456-7890");
             Empresa sorteq = new Fornecedor("Sorteq", "12345678900", new EmpressaPessoaJuridica());
-                // new TipoEmpresa("Fornecedor"));
+            // new TipoEmpresa("Fornecedor"));
             sorteq.AdicionarContato(pauloDaSorteq);
         }
     }

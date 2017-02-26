@@ -22,6 +22,7 @@ namespace WebForLink.Domain.Entities
         public Contratante Contratante { get; private set; }
         public Aplicacao Aplicacao { get; private set; }
         public List<Perfil> Perfis { get; private set; }
+        public List<Papel> Papeis { get; private set; }
 
         public void SetContratante(Contratante contratante)
         {
