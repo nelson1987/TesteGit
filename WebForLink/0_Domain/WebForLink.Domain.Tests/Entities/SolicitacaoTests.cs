@@ -1,5 +1,6 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using WebForLink.Domain.Entities;
+using WebForLink.Domain.Entities.Tipos;
 
 namespace WebForLink.Domain.Tests.Entities
 {
@@ -11,7 +12,7 @@ namespace WebForLink.Domain.Tests.Entities
         {
             var nelson = new Usuario("nelson.neto");
             Empresa sorteq = new Fornecedor("Sorteq", "12345678900", new TipoEmpresa("Fornecedor"));
-            var criacaoFornecedor = new Solicitacao(nelson, sorteq);
+            Solicitacao criacaoFornecedor = new TipoSolicitacaoCadastro(nelson, sorteq);
             Assert.AreEqual(criacaoFornecedor.Criador.Contratante, nelson.Contratante);
             Assert.AreEqual(criacaoFornecedor.Solicitante, nelson.Contratante);
             Assert.AreEqual(criacaoFornecedor.Solicitado, sorteq);

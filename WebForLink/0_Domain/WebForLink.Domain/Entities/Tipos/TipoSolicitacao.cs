@@ -1,4 +1,4 @@
-﻿namespace WebForLink.Domain.Entities
+﻿namespace WebForLink.Domain.Entities.Tipos
 {
     public class TipoSolicitacao
     {

@@ -1,17 +1,19 @@
-﻿namespace WebForLink.Domain.Entities
+﻿namespace WebForLink.Domain.Entities.Tipos
 {
-    public class StatusPreCadastro
+    public class TipoFluxo
     {
-        protected StatusPreCadastro()
+        protected TipoFluxo()
         {
         }
 
-        public StatusPreCadastro(string nome) : this()
+        public TipoFluxo(string nome)
+            : this()
         {
             Nome = nome;
         }
 
-        public StatusPreCadastro(int id, string nome) : this(nome)
+        public TipoFluxo(int id, string nome)
+            : this(nome)
         {
             Id = id;
             Nome = nome;

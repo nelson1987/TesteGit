@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using WebForLink.Domain.Entities.Tipos;
 
 namespace WebForLink.Domain.Entities
 {

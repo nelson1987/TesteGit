@@ -1,4 +1,6 @@
-﻿namespace WebForLink.Domain.Entities
+﻿using WebForLink.Domain.Entities.Tipos;
+
+namespace WebForLink.Domain.Entities
 {
     public class Fornecedor : Empresa
     {

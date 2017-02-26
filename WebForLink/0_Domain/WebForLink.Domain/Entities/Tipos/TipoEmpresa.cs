@@ -1,20 +1,20 @@
 ﻿using System.Collections.Generic;
 
-namespace WebForLink.Domain.Entities
+namespace WebForLink.Domain.Entities.Tipos
 {
-    public class TipoContratante
+    public class TipoEmpresa
     {
-        protected TipoContratante()
+        protected TipoEmpresa()
         {
         }
 
-        public TipoContratante(string nome)
+        public TipoEmpresa(string nome)
             : this()
         {
             Nome = nome;
         }
 
-        public TipoContratante(int id, string nome)
+        public TipoEmpresa(int id, string nome)
             : this(nome)
         {
             Id = id;

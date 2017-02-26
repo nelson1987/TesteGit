@@ -42,8 +42,8 @@
     <Compile Include="Entities\Aplicacao.cs" />
     <Compile Include="Entities\Arquivo.cs" />
     <Compile Include="Entities\Banco.cs" />
-    <Compile Include="Entities\CategoriaEmpresa.cs" />
-    <Compile Include="Entities\CategoriaEmpresaCh.cs" />
+    <Compile Include="Entities\Categorias\CategoriaEmpresa.cs" />
+    <Compile Include="Entities\Categorias\CategoriaEmpresaCh.cs" />
     <Compile Include="Entities\ConfiguracaoSistema.cs" />
     <Compile Include="Entities\Contato.cs" />
     <Compile Include="Entities\Contratante.cs" />
@@ -52,7 +52,8 @@
     </Compile>
     <Compile Include="Entities\Fornecedor.cs" />
     <Compile Include="Entities\Passo.cs" />
-    <Compile Include="Entities\TipoSolicitacao.cs" />
+    <Compile Include="Entities\Perfil.cs" />
+    <Compile Include="Entities\Tipos\TipoSolicitacao.cs" />
     <Compile Include="Etapa.cs" />
     <Compile Include="Exceptions\ContratanteNullException.cs" />
     <Compile Include="Entities\Documento.cs" />
@@ -67,14 +68,14 @@
     <Compile Include="Entities\RoboSintegra.cs" />
     <Compile Include="Entities\RoboSuframa.cs" />
     <Compile Include="Entities\Solicitacao.cs" />
-    <Compile Include="Entities\StatusEmpresa.cs" />
-    <Compile Include="Entities\StatusPreCadastro.cs" />
-    <Compile Include="Entities\StatusSolicitacao.cs" />
-    <Compile Include="Entities\TipoContratante.cs" />
-    <Compile Include="Entities\TipoEmpresa.cs" />
-    <Compile Include="Entities\TipoFluxo.cs" />
-    <Compile Include="Entities\TIpoSolicitacaoCadastro.cs" />
-    <Compile Include="Entities\TipoUnspsc.cs" />
+    <Compile Include="Entities\Status\StatusEmpresa.cs" />
+    <Compile Include="Entities\Status\StatusPreCadastro.cs" />
+    <Compile Include="Entities\Status\StatusSolicitacao.cs" />
+    <Compile Include="Entities\Tipos\TipoContratante.cs" />
+    <Compile Include="Entities\Tipos\TipoEmpresa.cs" />
+    <Compile Include="Entities\Tipos\TipoFluxo.cs" />
+    <Compile Include="Entities\Tipos\TIpoSolicitacaoCadastro.cs" />
+    <Compile Include="Entities\Tipos\TipoUnspsc.cs" />
     <Compile Include="Entities\Material.cs" />
     <Compile Include="Entities\Servico.cs" />
     <Compile Include="Entities\Usuario.cs" />

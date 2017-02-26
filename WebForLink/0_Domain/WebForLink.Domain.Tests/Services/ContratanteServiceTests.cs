@@ -1,5 +1,6 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using WebForLink.Domain.Entities;
+using WebForLink.Domain.Entities.Status;
 using WebForLink.Domain.Services;
 
 namespace WebForLink.Domain.Tests.Services

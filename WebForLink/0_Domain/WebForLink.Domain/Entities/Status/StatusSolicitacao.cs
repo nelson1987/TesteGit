@@ -1,4 +1,4 @@
-﻿namespace WebForLink.Domain.Entities
+﻿namespace WebForLink.Domain.Entities.Status
 {
     public class StatusSolicitacao
     {

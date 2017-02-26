@@ -1,5 +1,7 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using WebForLink.Domain.Entities;
+using WebForLink.Domain.Entities.Status;
+using WebForLink.Domain.Entities.Tipos;
 
 namespace WebForLink.Domain.Tests.Entities
 {

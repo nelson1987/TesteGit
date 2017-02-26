@@ -1,21 +1,21 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using WebForLink.Domain.Entities;
+using WebForLink.Domain.Entities.Tipos;
 
 namespace WebForLink.Domain.Tests.Entities
 {
     [TestClass]
     public class SolicitacaoCadastroTests
     {
-        private Aplicacao _webForLink;
         private Usuario _nelson;
         private TipoEmpresa _pessoaJuridica;
         private Contratante _samarco;
         private Empresa _sorteq;
-
+        private Aplicacao _webForLink;
         [TestInitialize]
         public void SetUp()
         {
-            _webForLink = new Aplicacao("WebForLink", "Cadastro de Fornecedores");
+            _webForLink = new Aplicacao("WebForLink","Cadastro de Fornecedores");
             _samarco = new Contratante("Samarco");
             _nelson = new Usuario("nelson.neto", _webForLink, _samarco);
             _pessoaJuridica = new TipoEmpresa("Pessoa Jurídica");

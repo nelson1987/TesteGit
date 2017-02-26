@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace WebForLink.Domain.Entities
+namespace WebForLink.Domain.Entities.Tipos
 {
     public class TipoSolicitacaoCadastro : Solicitacao
     {

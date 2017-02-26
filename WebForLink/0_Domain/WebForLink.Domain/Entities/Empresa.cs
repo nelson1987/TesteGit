@@ -1,10 +1,12 @@
 ﻿using System.Collections.Generic;
+using WebForLink.Domain.Entities.Status;
+using WebForLink.Domain.Entities.Tipos;
 
 namespace WebForLink.Domain.Entities
 {
     public abstract class Empresa
     {
-        protected Empresa()
+        private Empresa()
         {
             Contratantes = new List<Contratante>();
         }

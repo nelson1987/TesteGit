@@ -1,12 +1,14 @@
-﻿namespace WebForLink.Domain.Entities
+﻿using WebForLink.Domain.Entities.Tipos;
+
+namespace WebForLink.Domain.Entities
 {
-    public class Solicitacao
+    public abstract class Solicitacao
     {
-        protected Solicitacao()
+        private Solicitacao()
         {
         }
 
-        public Solicitacao(Usuario criador, Empresa solicitado)
+        protected Solicitacao(Usuario criador, Empresa solicitado)
             : this()
         {
             Criador = criador;
