@@ -9,6 +9,7 @@ namespace WebForLink.Domain.Entities
         private Empresa()
         {
             Contratantes = new List<Contratante>();
+            FichaCadastral = new FichaCadastralEmpresa();
         }
 
         protected Empresa(string razaoSocial, string documento, TipoEmpresa tipo) : this()

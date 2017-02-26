@@ -13,6 +13,7 @@ namespace WebForLink.Domain.Entities.Tipos
         {
             Nome = nome;
         }
+
         public int Id { get; private set; }
         public string Nome { get; private set; }
         public List<Contratante> Contratantes { get; private set; }
@@ -25,6 +26,7 @@ namespace WebForLink.Domain.Entities.Tipos
         {
         }
     }
+
     public class EmpressaPessoaFisica : TipoEmpresa
     {
         public EmpressaPessoaFisica()
@@ -32,6 +34,7 @@ namespace WebForLink.Domain.Entities.Tipos
         {
         }
     }
+
     public class EmpresaEstrangeira : TipoEmpresa
     {
         public EmpresaEstrangeira()

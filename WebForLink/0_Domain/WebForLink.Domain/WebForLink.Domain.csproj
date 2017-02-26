@@ -44,6 +44,7 @@
     <Compile Include="Entities\Banco.cs" />
     <Compile Include="Entities\Categorias\CategoriaEmpresa.cs" />
     <Compile Include="Entities\Categorias\CategoriaEmpresaCh.cs" />
+    <Compile Include="Entities\Compartilhamento.cs" />
     <Compile Include="Entities\ConfiguracaoSistema.cs" />
     <Compile Include="Entities\Contato.cs" />
     <Compile Include="Entities\Contratante.cs" />
@@ -84,6 +85,9 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram1.cd" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -13,6 +13,7 @@ namespace WebForLink.Domain.Entities.Tipos
         {
             Nome = nome;
         }
+
         /*
         protected TipoContratante(int id, string nome)
             : this(nome)
@@ -27,7 +28,7 @@ namespace WebForLink.Domain.Entities.Tipos
     }
 
     /// <summary>
-    /// Cliente Âncora
+    ///     Cliente Âncora
     /// </summary>
     public class ClienteContratante : TipoContratante
     {
@@ -36,8 +37,9 @@ namespace WebForLink.Domain.Entities.Tipos
         {
         }
     }
+
     /// <summary>
-    /// Fornecedor Individual
+    ///     Fornecedor Individual
     /// </summary>
     public class FornecedorContratante : TipoContratante
     {
@@ -45,10 +47,10 @@ namespace WebForLink.Domain.Entities.Tipos
             : base("Fornecedor Individual")
         {
         }
-
     }
+
     /// <summary>
-    /// Fabricante Âncora
+    ///     Fabricante Âncora
     /// </summary>
     public class FabricanteContratante : TipoContratante
     {
@@ -56,6 +58,5 @@ namespace WebForLink.Domain.Entities.Tipos
             : base("Fabricante")
         {
         }
-
     }
 }

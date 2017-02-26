@@ -34,6 +34,7 @@ namespace WebForLink.Domain.Tests.Entities
 
             var webformat = new Aplicacao("WebForMat", "Cadastro de Materiais");
             Assert.AreEqual(webformat.Usuarios.Count, 0);
+            webforlink.AdicionarUsuario(nelsonNeto);
             webformat.AdicionarUsuario(nelsonNeto);
 
             Assert.AreEqual(webforlink.Usuarios.Count, 1);

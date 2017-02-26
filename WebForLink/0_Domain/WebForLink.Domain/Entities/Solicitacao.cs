@@ -1,4 +1,4 @@
-﻿using WebForLink.Domain.Entities.Tipos;
+﻿using System;
 
 namespace WebForLink.Domain.Entities
 {
@@ -26,6 +26,11 @@ namespace WebForLink.Domain.Entities
             get { return Criador.Contratante; }
         }
 
+        public Etapa EtapaAtual
+        {
+            get { return Fluxo.EtapaAtual; }
+        }
+
         //public void SetTipo(TipoSolicitacao tipo)
         //{
         //    Tipo = tipo;
@@ -33,12 +38,10 @@ namespace WebForLink.Domain.Entities
 
         public void SetFluxo(Fluxo fluxo)
         {
-            Fluxo = fluxo;
-        }
+            if (fluxo.Contratante != Solicitante)
+                throw new Exception("O contratante da solicitação não é o mesmo do fluxo.");
 
-        public Etapa EtapaAtual
-        {
-            get { return Fluxo.EtapaAtual; }
+            Fluxo = fluxo;
         }
     }
 }

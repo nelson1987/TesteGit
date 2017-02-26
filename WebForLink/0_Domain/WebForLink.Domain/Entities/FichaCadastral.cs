@@ -2,7 +2,7 @@
 
 namespace WebForLink.Domain.Entities
 {
-    public class FichaCadastral
+    public abstract class FichaCadastral
     {
         protected FichaCadastral()
         {
@@ -12,16 +12,40 @@ namespace WebForLink.Domain.Entities
             Bancos = new List<Banco>();
             Servicos = new List<Servico>();
             Materiais = new List<Material>();
+            Robos = new List<Robo>();
         }
 
         public int Id { get; private set; }
         //public Contratante Contratante { get; private set; }
-        public Robo Robos { get; private set; }
+        public List<Robo> Robos { get; private set; }
         public List<Contato> Contatos { get; private set; }
         public List<Documento> Anexos { get; private set; }
         public List<Endereco> Enderecos { get; private set; }
         public List<Banco> Bancos { get; private set; }
         public List<Servico> Servicos { get; private set; }
         public List<Material> Materiais { get; private set; }
+    }
+
+    /// <summary>
+    ///     Ficha Cadastral enviada em Compartilhamento
+    /// </summary>
+    public class FichaCadastralCompartilhada : FichaCadastral
+    {
+        public List<string> ListaEmail { get; private set; }
+    }
+
+    /// <summary>
+    ///     Ficha Cadastral de Empresa não saneada pelo sistema
+    /// </summary>
+    public class FichaCadastralEmpresaBase : FichaCadastral
+    {
+        public Arquivo Importacao { get; private set; }
+    }
+
+    /// <summary>
+    ///     Ficha Cadastral Comum das empresas do sistema
+    /// </summary>
+    public class FichaCadastralEmpresa : FichaCadastral
+    {
     }
 }

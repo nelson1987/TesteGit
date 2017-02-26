@@ -20,7 +20,7 @@ namespace WebForLink.Domain
         public string Nome { get; private set; }
         public List<Passo> Passos { get; private set; }
         public bool Aprovado { get; private set; }
-        
+
         public void AdicionarPassos(Passo[] passos)
         {
             Passos.AddRange(passos);

@@ -1,16 +1,18 @@
 ﻿namespace WebForLink.Domain.Entities
 {
-    public class Robo
+    public abstract class Robo
     {
-        protected Robo()
+        private Robo()
         {
         }
 
+        protected Robo(string razaoSocial)
+            : this()
+        {
+            RazaoSocial = razaoSocial;
+        }
+
         public int Id { get; private set; }
-        public RoboReceitaFederal RoboReceitaFederal { get; private set; }
-        public RoboCorreios RoboCorreios { get; private set; }
-        public RoboSimplesNacional RoboSimplesNacional { get; set; }
-        public RoboSintegra RoboSintegra { get; set; }
-        public RoboSuframa RoboSuframa { get; set; }
+        public string RazaoSocial { get; set; }
     }
 }

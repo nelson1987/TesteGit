@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
 namespace WebForLink.Domain.Entities
 {
@@ -34,7 +33,5 @@ namespace WebForLink.Domain.Entities
             if (Aplicacao.TemEssePerfil(administrador))
                 Perfis.Add(administrador);
         }
-
-        public object TotalSolicitacoes { get; set; }
     }
 }

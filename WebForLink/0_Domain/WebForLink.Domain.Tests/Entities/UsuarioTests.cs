@@ -29,7 +29,8 @@ namespace WebForLink.Domain.Tests.Entities
         [TestMethod]
         public void IncluirUsuarioEmUmContratante()
         {
-            var nelson = new Usuario("nelson.neto", new Aplicacao("WebForLink", ""), new Contratante("", new ClienteContratante()));
+            var nelson = new Usuario("nelson.neto", new Aplicacao("WebForLink", ""),
+                new Contratante("", new ClienteContratante()));
             var samarco = new Contratante("Samarco", new ClienteContratante());
             nelson.SetContratante(samarco);
             Assert.AreEqual(nelson.Contratante.RazaoSocial, "Samarco");

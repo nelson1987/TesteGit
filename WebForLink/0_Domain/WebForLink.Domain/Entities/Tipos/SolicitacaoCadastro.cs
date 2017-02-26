@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace WebForLink.Domain.Entities.Tipos
+﻿namespace WebForLink.Domain.Entities.Tipos
 {
     public class SolicitacaoCadastro : Solicitacao
     {
@@ -13,7 +11,6 @@ namespace WebForLink.Domain.Entities.Tipos
                     tipoDeEmpresa = solicitado.Tipo.Nome;
 
             //SetTipo(new TipoSolicitacao(String.Format("Cadastro de {0}", tipoDeEmpresa)));
-
         }
     }
 }
