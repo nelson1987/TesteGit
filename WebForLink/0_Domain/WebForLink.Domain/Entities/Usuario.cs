@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 namespace WebForLink.Domain.Entities
 {
@@ -9,14 +10,10 @@ namespace WebForLink.Domain.Entities
             Perfis = new List<Perfil>();
         }
 
-        public Usuario(string login) : this()
+        public Usuario(string login, Aplicacao aplicacao, Contratante contratante)
+            : this()
         {
             Login = login;
-        }
-
-        public Usuario(string login, Aplicacao aplicacao, Contratante contratante)
-            : this(login)
-        {
             Aplicacao = aplicacao;
             Contratante = contratante;
         }
@@ -25,35 +22,9 @@ namespace WebForLink.Domain.Entities
         public string Login { get; private set; }
         public Contratante Contratante { get; private set; }
         public Aplicacao Aplicacao { get; private set; }
-        public List<Perfil> Perfis { get; set; }
-        //public List<Empresa> VisualizarFornecedores
-        //{
-        //    get
-        //    {
-        //        if (Contratante == null)
-        //            throw new Exception("O usuário deve ter um contratante atrelado a ele.");
+        public List<Perfil> Perfis { get; private set; }
 
-        //        return Contratante
-        //            .EmpresasCadastradas
-        //            .ToList();
-        //    }
-        //}
-
-        //public List<Empresa> VisualizarFornecedoresCadastrados
-        //{
-        //    get
-        //    {
-        //        if (Contratante == null)
-        //            throw new Exception("O usuário deve ter um contratante atrelado a ele.");
-
-        //        return Contratante
-        //            .EmpresasCadastradas
-        //            .Where(x => x.Status == new StatusEmpresa("Ativo"))
-        //            .ToList();
-        //    }
-        //}
-
-        public void ContratadoPor(Contratante contratante)
+        public void SetContratante(Contratante contratante)
         {
             Contratante = contratante;
         }
@@ -63,5 +34,7 @@ namespace WebForLink.Domain.Entities
             if (Aplicacao.TemEssePerfil(administrador))
                 Perfis.Add(administrador);
         }
+
+        public object TotalSolicitacoes { get; set; }
     }
 }

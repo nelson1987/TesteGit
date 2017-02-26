@@ -18,10 +18,10 @@ namespace WebForLink.Domain
 
         public int Id { get; private set; }
         public string Nome { get; private set; }
-        public List<Passo> Passos { get; set; }
-        public bool Aprovado { get; set; }
-
-        public void SetPassos(params Passo[] passos)
+        public List<Passo> Passos { get; private set; }
+        public bool Aprovado { get; private set; }
+        
+        public void AdicionarPassos(Passo[] passos)
         {
             Passos.AddRange(passos);
         }

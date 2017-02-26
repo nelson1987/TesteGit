@@ -11,12 +11,14 @@ namespace WebForLink.Domain.Entities
             Etapas = new List<Etapa>();
         }
 
-        public Fluxo(string nome) : this()
+        public Fluxo(string nome)
+            : this()
         {
             Nome = nome;
         }
 
-        public Fluxo(TipoFluxo tipo, Contratante contratante, TipoEmpresa tipoEmpresa) : this()
+        public Fluxo(TipoFluxo tipo, Contratante contratante, TipoEmpresa tipoEmpresa)
+            : this()
         {
             TipoFluxo = tipo;
             Contratante = contratante;
@@ -28,7 +30,7 @@ namespace WebForLink.Domain.Entities
         public TipoFluxo TipoFluxo { get; private set; }
         public TipoEmpresa TipoEmpresa { get; private set; }
         public Contratante Contratante { get; private set; }
-        public List<Etapa> Etapas { get; set; }
+        public List<Etapa> Etapas { get; private set; }
 
         public Etapa EtapaAtual
         {
@@ -38,6 +40,19 @@ namespace WebForLink.Domain.Entities
         public void AdicionarEtapas(params Etapa[] etapas)
         {
             Etapas.AddRange(etapas);
+        }
+
+        public void AdicionarPassos(Etapa etapa, params Passo[] passo1)
+        {
+            etapa.AdicionarPassos(passo1);
+            Etapas.Add(etapa);
+        }
+
+        public void AprovarPasso(Passo passo)
+        {
+            Passo passoAprovado = EtapaAtual.Passos.FirstOrDefault(y => y == passo);
+            if (passoAprovado != null)
+                passoAprovado.SetAprovado(true);
         }
     }
 }

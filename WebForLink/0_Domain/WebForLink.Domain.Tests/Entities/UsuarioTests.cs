@@ -1,6 +1,7 @@
 ﻿using System.Linq;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using WebForLink.Domain.Entities;
+using WebForLink.Domain.Entities.Tipos;
 
 namespace WebForLink.Domain.Tests.Entities
 {
@@ -15,7 +16,7 @@ namespace WebForLink.Domain.Tests.Entities
         public void SetUp()
         {
             _webForLink = new Aplicacao("WebForLink", "Cadastro de Fornecedores");
-            _samarco = new Contratante("Samarco");
+            _samarco = new Contratante("Samarco", new ClienteContratante());
             _nelson = new Usuario("nelson.neto", _webForLink, _samarco);
         }
 
@@ -28,9 +29,9 @@ namespace WebForLink.Domain.Tests.Entities
         [TestMethod]
         public void IncluirUsuarioEmUmContratante()
         {
-            var nelson = new Usuario("nelson.neto");
-            var samarco = new Contratante("Samarco");
-            nelson.ContratadoPor(samarco);
+            var nelson = new Usuario("nelson.neto", new Aplicacao("WebForLink", ""), new Contratante("", new ClienteContratante()));
+            var samarco = new Contratante("Samarco", new ClienteContratante());
+            nelson.SetContratante(samarco);
             Assert.AreEqual(nelson.Contratante.RazaoSocial, "Samarco");
         }
 
@@ -38,7 +39,7 @@ namespace WebForLink.Domain.Tests.Entities
         public void IncluirUsuarioEmUmContratanteEmDuasAplicacoesDiferentes()
         {
             _webForLink.AdicionarUsuario(_nelson);
-            _nelson.ContratadoPor(_samarco);
+            _nelson.SetContratante(_samarco);
             Assert.AreEqual(_nelson.Contratante.RazaoSocial, "Samarco");
             Assert.AreEqual(_webForLink.Usuarios.Select(x => x.Contratante).FirstOrDefault(), _samarco);
         }

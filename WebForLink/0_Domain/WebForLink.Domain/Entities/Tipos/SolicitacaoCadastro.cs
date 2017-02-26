@@ -12,7 +12,8 @@ namespace WebForLink.Domain.Entities.Tipos
                 if (!string.IsNullOrEmpty(solicitado.Tipo.Nome))
                     tipoDeEmpresa = solicitado.Tipo.Nome;
 
-            SetTipo(new TipoSolicitacao(String.Format("Cadastro de {0}", tipoDeEmpresa)));
+            //SetTipo(new TipoSolicitacao(String.Format("Cadastro de {0}", tipoDeEmpresa)));
+
         }
     }
 }

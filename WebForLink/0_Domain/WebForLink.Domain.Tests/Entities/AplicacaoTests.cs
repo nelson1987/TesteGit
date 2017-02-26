@@ -1,5 +1,6 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using WebForLink.Domain.Entities;
+using WebForLink.Domain.Entities.Tipos;
 
 namespace WebForLink.Domain.Tests.Entities
 {
@@ -18,7 +19,7 @@ namespace WebForLink.Domain.Tests.Entities
         public void IncluirUsuarioNaAplicacao()
         {
             var webforlink = new Aplicacao("WebForLink", "Cadastro de Fornecedores");
-            var nelsonNeto = new Usuario("nelson.neto");
+            var nelsonNeto = new Usuario("nelson.neto", webforlink, new Contratante("Samarco", new ClienteContratante()));
             webforlink.AdicionarUsuario(nelsonNeto);
             Assert.AreEqual(webforlink.Usuarios.Count, 1);
         }
@@ -26,11 +27,10 @@ namespace WebForLink.Domain.Tests.Entities
         [TestMethod]
         public void CopiarUsuarioDeUmaAplicacaoParaOutra()
         {
-            var nelsonNeto = new Usuario("nelson.neto");
-
             var webforlink = new Aplicacao("WebForLink", "Cadastro de Fornecedores");
+            var nelsonNeto = new Usuario("nelson.neto", webforlink, new Contratante("Samarco", new ClienteContratante()));
+
             Assert.AreEqual(webforlink.Usuarios.Count, 0);
-            webforlink.AdicionarUsuario(nelsonNeto);
 
             var webformat = new Aplicacao("WebForMat", "Cadastro de Materiais");
             Assert.AreEqual(webformat.Usuarios.Count, 0);

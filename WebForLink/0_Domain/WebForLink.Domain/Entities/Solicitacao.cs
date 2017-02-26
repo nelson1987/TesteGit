@@ -17,7 +17,8 @@ namespace WebForLink.Domain.Entities
 
         public int Id { get; private set; }
         public Empresa Solicitado { get; private set; }
-        public TipoSolicitacao Tipo { get; private set; }
+        public Fluxo Fluxo { get; private set; }
+        //public TipoSolicitacao Tipo { get; private set; }
         public Usuario Criador { get; private set; }
 
         public Contratante Solicitante
@@ -25,9 +26,19 @@ namespace WebForLink.Domain.Entities
             get { return Criador.Contratante; }
         }
 
-        public void SetTipo(TipoSolicitacao tipo)
+        //public void SetTipo(TipoSolicitacao tipo)
+        //{
+        //    Tipo = tipo;
+        //}
+
+        public void SetFluxo(Fluxo fluxo)
         {
-            Tipo = tipo;
+            Fluxo = fluxo;
+        }
+
+        public Etapa EtapaAtual
+        {
+            get { return Fluxo.EtapaAtual; }
         }
     }
 }

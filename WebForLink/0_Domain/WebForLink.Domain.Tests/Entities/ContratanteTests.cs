@@ -7,12 +7,12 @@ namespace WebForLink.Domain.Tests.Entities
     [TestClass]
     public class ContratanteTests
     {
-        public Contratante Samarco;
+        private Contratante Samarco;
 
         [TestInitialize]
         public void SetUp()
         {
-            Samarco = new Contratante("Samarco");
+            Samarco = new Contratante("Samarco", new ClienteContratante());
         }
 
         [TestMethod]
@@ -50,7 +50,7 @@ namespace WebForLink.Domain.Tests.Entities
             var samarcoDados = new Cliente("Samarco", "12345678900", new EmpressaPessoaJuridica());//new TipoEmpresa("Fornecedor"));
             samarco.SetDadosGerais(samarcoDados);
             Assert.AreEqual(samarco.DadosGerais.RazaoSocial, samarcoDados.RazaoSocial);
-            Assert.AreEqual(samarco.TipoContratante.Nome, "Cliente Ancora");
+            Assert.AreEqual(samarco.TipoContratante.Nome, "Cliente Âncora");
         }
     }
 }

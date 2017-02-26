@@ -10,7 +10,7 @@ namespace WebForLink.Domain.Tests.Entities
         [TestMethod]
         public void CriarSolicitacao()
         {
-            var nelson = new Usuario("nelson.neto");
+            var nelson = new Usuario("nelson.neto", new Aplicacao("WebForLink", ""), new Contratante("", new ClienteContratante()));
             Empresa sorteq = new Fornecedor("Sorteq", "12345678900", new EmpressaPessoaJuridica());//new TipoEmpresa("Fornecedor"));
             Solicitacao criacaoFornecedor = new SolicitacaoCadastro(nelson, sorteq);
             Assert.AreEqual(criacaoFornecedor.Criador.Contratante, nelson.Contratante);
@@ -21,8 +21,8 @@ namespace WebForLink.Domain.Tests.Entities
         [TestMethod]
         public void CriarSolicitacaoCriacaoFornecedor()
         {
-            var nelson = new Usuario("nelson.neto");
-            Empresa sorteq = new Fornecedor("Sorteq", "12345678900", new TipoEmpresa("Fornecedor"));
+            var nelson = new Usuario("nelson.neto", new Aplicacao("WebForLink", ""), new Contratante("", new ClienteContratante()));
+            Empresa sorteq = new Fornecedor("Sorteq", "12345678900", new EmpressaPessoaJuridica());// new TipoEmpresa("Fornecedor"));
             Solicitacao criacaoFornecedor = new SolicitacaoCadastro(nelson, sorteq);
             Assert.AreEqual(criacaoFornecedor.Criador, nelson);
             Assert.AreEqual(criacaoFornecedor.Solicitante, nelson.Contratante);

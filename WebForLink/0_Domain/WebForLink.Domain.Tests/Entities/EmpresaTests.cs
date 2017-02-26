@@ -18,7 +18,7 @@ namespace WebForLink.Domain.Tests.Entities
         {
             _pessoaJuridica = new EmpressaPessoaJuridica();//new TipoEmpresa("Pessoa Jurídica");
             _empresa = new Fornecedor("Nova Empresa", "1234567890001", _pessoaJuridica);
-            _contratante = new Contratante("Zamarco");
+            _contratante = new Contratante("Zamarco", new ClienteContratante());
             _statusEmpresa = new StatusEmpresa("Ativo");
         }
 

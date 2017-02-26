@@ -38,10 +38,5 @@ namespace WebForLink.Domain.Entities
         {
             return Perfis.Any(x => x == perfil);
         }
-
-        public int TotalSolicitacoes
-        {
-            get { return Usuarios.Sum(x => x.Contratante.Solicitacoes.Count); }
-        }
     }
 }
