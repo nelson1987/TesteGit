@@ -5,7 +5,7 @@ namespace WebForLink.Domain.Entities
 {
     public class Aplicacao
     {
-        protected Aplicacao()
+        private Aplicacao()
         {
             Usuarios = new List<Usuario>();
             Perfis = new List<Perfil>();

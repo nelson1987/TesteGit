@@ -7,15 +7,16 @@ namespace WebForLink.Domain.Tests.Entities
     [TestClass]
     public class UsuarioTests
     {
-        private Aplicacao _webForLink;
         private Usuario _nelson;
         private Contratante _samarco;
+        private Aplicacao _webForLink;
+
         [TestInitialize]
         public void SetUp()
         {
             _webForLink = new Aplicacao("WebForLink", "Cadastro de Fornecedores");
             _samarco = new Contratante("Samarco");
-            _nelson = new Usuario("nelson.neto",_webForLink, _samarco);
+            _nelson = new Usuario("nelson.neto", _webForLink, _samarco);
         }
 
         [TestMethod]
@@ -45,7 +46,7 @@ namespace WebForLink.Domain.Tests.Entities
         [TestMethod]
         public void VerificarPerfilDeUsuario()
         {
-            Perfil administrador = new Perfil("Administrador");
+            var administrador = new Perfil("Administrador");
             _webForLink.AdicionarPerfil(administrador);
             _nelson.AdicionarPerfil(administrador);
             Assert.AreEqual(_nelson.Perfis.Count, 1);

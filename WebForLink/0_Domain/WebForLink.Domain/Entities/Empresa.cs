@@ -10,12 +10,14 @@ namespace WebForLink.Domain.Entities
         {
             Contratantes = new List<Contratante>();
         }
+
         protected Empresa(string razaoSocial, string documento, TipoEmpresa tipo) : this()
         {
             RazaoSocial = razaoSocial;
             Documento = documento;
             Tipo = tipo;
         }
+
         public int Id { get; private set; }
         public string RazaoSocial { get; private set; }
         public string Documento { get; private set; }
@@ -28,6 +30,7 @@ namespace WebForLink.Domain.Entities
         {
             Tipo = tipoEmpresa;
         }
+
         public void SetStatusEmpresa(StatusEmpresa statusEmpresa)
         {
             Status = statusEmpresa;

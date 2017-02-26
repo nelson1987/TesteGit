@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data.Entity.ModelConfiguration;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Data.Entity.ModelConfiguration;
 using WebForLink.Domain.Entities;
 
 namespace WebForLink.Win.Banco
@@ -17,7 +12,7 @@ namespace WebForLink.Win.Banco
 
             // Properties
             Property(t => t.Login)
-                .HasColumnType(columnType:"varchar")
+                .HasColumnType("varchar")
                 .IsRequired()
                 .HasMaxLength(150);
 

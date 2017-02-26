@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
 namespace WebForLink.Domain.Entities
 {
@@ -10,13 +6,13 @@ namespace WebForLink.Domain.Entities
     {
         protected Perfil()
         {
-            
         }
 
         public Perfil(string nome) : this()
         {
             Nome = nome;
         }
+
         public int Id { get; private set; }
         public string Nome { get; private set; }
         public List<Usuario> Usuarios { get; private set; }

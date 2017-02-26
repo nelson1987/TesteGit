@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
 namespace WebForLink.Domain.Entities
 {
@@ -17,6 +13,7 @@ namespace WebForLink.Domain.Entities
             Servicos = new List<Servico>();
             Materiais = new List<Material>();
         }
+
         public int Id { get; private set; }
         //public Contratante Contratante { get; private set; }
         public Robo Robos { get; private set; }

@@ -32,7 +32,6 @@ namespace WebForLink.Domain.Entities
         public List<Empresa> EmpresasCadastradas { get; private set; }
         public List<Usuario> Usuarios { get; private set; }
         public Cliente DadosGerais { get; private set; }
-
         //public void SetCriador(Usuario usuario)
         //{
         //    Criador = usuario;

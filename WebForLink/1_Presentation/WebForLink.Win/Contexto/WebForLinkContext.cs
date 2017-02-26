@@ -43,13 +43,12 @@ namespace WebForLink.Win.Contexto
                 .Configure(p => p.IsKey());
 
             modelBuilder.Properties<string>()
-                .Configure(p => p.HasColumnType(columnType: "varchar")
+                .Configure(p => p.HasColumnType("varchar")
                     .HasMaxLength(255));
 
             modelBuilder.Configurations.Add(new AplicacaoMap());
             modelBuilder.Configurations.Add(new UsuarioMap());
             modelBuilder.Configurations.Add(new EmpresaMap());
-
         }
     }
 }

@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System.Collections.Generic;
 
 namespace WebForLink.Domain.Entities
 {
@@ -27,9 +25,7 @@ namespace WebForLink.Domain.Entities
         public string Login { get; private set; }
         public Contratante Contratante { get; private set; }
         public Aplicacao Aplicacao { get; private set; }
-
         public List<Perfil> Perfis { get; set; }
-
         //public List<Empresa> VisualizarFornecedores
         //{
         //    get

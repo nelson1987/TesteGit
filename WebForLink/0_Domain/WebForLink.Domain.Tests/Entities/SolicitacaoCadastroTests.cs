@@ -12,10 +12,11 @@ namespace WebForLink.Domain.Tests.Entities
         private Contratante _samarco;
         private Empresa _sorteq;
         private Aplicacao _webForLink;
+
         [TestInitialize]
         public void SetUp()
         {
-            _webForLink = new Aplicacao("WebForLink","Cadastro de Fornecedores");
+            _webForLink = new Aplicacao("WebForLink", "Cadastro de Fornecedores");
             _samarco = new Contratante("Samarco");
             _nelson = new Usuario("nelson.neto", _webForLink, _samarco);
             _pessoaJuridica = new TipoEmpresa("Pessoa Jurídica");
