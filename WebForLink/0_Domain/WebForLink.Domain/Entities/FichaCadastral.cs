@@ -24,6 +24,7 @@ namespace WebForLink.Domain.Entities
         public List<Banco> Bancos { get; private set; }
         public List<Servico> Servicos { get; private set; }
         public List<Material> Materiais { get; private set; }
+        public List<Perfil> Perfis { get; private set; }
     }
 
     /// <summary>

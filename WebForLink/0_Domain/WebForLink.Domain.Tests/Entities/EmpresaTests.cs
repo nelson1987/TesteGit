@@ -29,5 +29,16 @@ namespace WebForLink.Domain.Tests.Entities
             _empresa.Contratantes.Add(_contratante);
             _empresa.SetStatusEmpresa(_statusEmpresa);
         }
+
+        [TestMethod]
+        public void VisualizarFichaCadastral()
+        {
+            Assert.IsNotNull(_empresa.FichaCadastral);
+            Assert.AreEqual(_empresa.FichaCadastral.Contatos.Count, 0);
+            var abelardo = new Contato("Abelardo", "abelardo.com", "", "");
+            _empresa.AdicionarContato(abelardo);
+            Assert.AreEqual(_empresa.FichaCadastral.Contatos.Count, 1);
+            Assert.AreEqual(_empresa.FichaCadastral.Contatos[0].Nome, "Abelardo");
+        }
     }
 }

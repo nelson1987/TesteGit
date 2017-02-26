@@ -1,4 +1,5 @@
 ﻿using System;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Data.Entity;
 using System.Data.Entity.ModelConfiguration.Conventions;
 using System.Diagnostics;
@@ -41,6 +42,9 @@ namespace WebForLink.Win.Contexto
             modelBuilder.Properties()
                 .Where(p => p.Name.Equals("Id"))
                 .Configure(p => p.IsKey());
+            modelBuilder.Properties()
+                .Where(p => p.Name.Equals("Id"))
+                .Configure(x => x.HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity));
 
             modelBuilder.Properties<string>()
                 .Configure(p => p.HasColumnType("varchar")

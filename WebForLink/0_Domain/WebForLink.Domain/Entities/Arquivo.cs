@@ -4,7 +4,7 @@ namespace WebForLink.Domain.Entities
 {
     public class Arquivo
     {
-        protected Arquivo()
+        private Arquivo()
         {
         }
 

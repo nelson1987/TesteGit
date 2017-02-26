@@ -4,7 +4,7 @@ namespace WebForLink.Domain.Entities
 {
     public class Documento
     {
-        protected Documento()
+        private Documento()
         {
             Arquivos = new List<Arquivo>();
         }

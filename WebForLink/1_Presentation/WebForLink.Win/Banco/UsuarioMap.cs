@@ -12,14 +12,21 @@ namespace WebForLink.Win.Banco
 
             // Properties
             Property(t => t.Login)
-                .HasColumnType("varchar")
-                .IsRequired()
-                .HasMaxLength(150);
+                .IsRequired();
 
             // Table & Column Mappings
             ToTable("WFL_USUARIO");
-            Property(t => t.Id).HasColumnName("Id");
-            //Property(t => t.Login).HasColumnName("Login");
+            Property(t => t.Id).HasColumnName("ID_USUARIO");
+            Property(t => t.Login).HasColumnName("LOGIN");
+
+            HasRequired(x => x.Aplicacao)
+                .WithMany(x => x.Usuarios);
+            HasRequired(x => x.Contratante)
+                .WithMany(x => x.Usuarios);
+            HasMany(x => x.Perfis)
+                .WithMany(x => x.Usuarios);
+            HasMany(x => x.Papeis)
+                .WithMany(x => x.Usuarios);
         }
     }
 }

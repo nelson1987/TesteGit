@@ -2,7 +2,7 @@
 {
     public class Contato
     {
-        protected Contato()
+        private Contato()
         {
         }
 
