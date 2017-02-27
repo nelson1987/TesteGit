@@ -4,11 +4,11 @@ namespace WebForLink.Domain.Entities.Status
 {
     public class StatusEmpresa
     {
-        protected StatusEmpresa()
+        private StatusEmpresa()
         {
         }
 
-        public StatusEmpresa(string nome)
+        public StatusEmpresa(string nome) : this()
         {
             Nome = nome;
         }

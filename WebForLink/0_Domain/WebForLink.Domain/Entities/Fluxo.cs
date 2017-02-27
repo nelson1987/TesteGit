@@ -29,12 +29,28 @@ namespace WebForLink.Domain.Entities
 
         public Etapa EtapaAtual
         {
-            get { return Etapas.FirstOrDefault(x => !x.Aprovado); }
-        }
-
-        public void AdicionarEtapas(params Etapa[] etapas)
-        {
-            Etapas.AddRange(etapas);
+            get
+            {
+                foreach (var etapa in Etapas)
+                {
+                    foreach (var passo in etapa.Passos)
+                    {
+                        if (!passo.Aprovado)
+                            return etapa;
+                    }
+                }
+                return null;
+                /*
+                foreach (Etapa etapa in Etapas)
+                {
+                    if (etapa.Passos.Any(passo => !passo.Aprovado))
+                    {
+                        return etapa;
+                    }
+                    //etapa.SetAprovado(true);
+                }*/
+                //return Etapas.FirstOrDefault(x => !x.Aprovado);
+            }
         }
 
         public void AdicionarPassos(Etapa etapa, params Passo[] passo1)
@@ -47,7 +63,35 @@ namespace WebForLink.Domain.Entities
         {
             var passoAprovado = EtapaAtual.Passos.FirstOrDefault(y => y == passo);
             if (passoAprovado != null)
-                passoAprovado.SetAprovado(true);
+                passoAprovado.Aprovar();
+        }
+
+        public void AprovarPasso(Usuario aprovador, Etapa etapa, Passo aprovado)
+        {
+            if (EtapaAtual.Equals(etapa))
+            {
+                foreach (var item in Etapas)
+                {
+                    if (!item.Aprovado && item.Equals(etapa))
+                    {
+                        foreach (var passo in item.Passos)
+                        {
+                            if (!passo.Aprovado && passo.Equals(aprovado))
+                            {
+                                passo.Aprovar();
+                                break;
+                            }
+                        }
+                        break;
+                    }
+                }
+                /*
+                Passo passoAprovado = EtapaAtual.Passos.FirstOrDefault(y => y == aprovado);
+                if (passoAprovado != null)
+                    if (aprovador.Papeis.FirstOrDefault(x => passoAprovado.Papeis.Contains(x)) != null)
+                        passoAprovado.SetAprovado(true);
+                */
+            }
         }
     }
 }

@@ -16,6 +16,7 @@ namespace WebForLink.Domain.Entities
         }
 
         public int Id { get; private set; }
+        public bool Aprovado { get; private set; }
         public Empresa Solicitado { get; private set; }
         public Fluxo Fluxo { get; private set; }
         //public TipoSolicitacao Tipo { get; private set; }
@@ -42,6 +43,11 @@ namespace WebForLink.Domain.Entities
                 throw new Exception("O contratante da solicitação não é o mesmo do fluxo.");
 
             Fluxo = fluxo;
+        }
+
+        public void Aprovar(Usuario aprovador, Etapa etapa, Passo aprovado)
+        {
+            Fluxo.AprovarPasso(aprovador, etapa, aprovado);
         }
     }
 }

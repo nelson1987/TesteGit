@@ -8,7 +8,8 @@ namespace WebForLink.Domain.Entities
         {
         }
 
-        private Papel(string nome)
+        public Papel(string nome)
+            : this()
         {
             Nome = nome;
         }

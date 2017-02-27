@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-
-namespace WebForLink.Domain.Entities.Tipos
+﻿namespace WebForLink.Domain.Entities.Tipos
 {
     //public abstract class TipoContratante
     //{
@@ -32,8 +30,8 @@ namespace WebForLink.Domain.Entities.Tipos
     /// </summary>
     public class ClienteAncora : Contratante
     {
-        public ClienteAncora(string razaoSocial) 
-            : base(razaoSocial)
+        public ClienteAncora(string razaoSocial)
+            : base(razaoSocial, new EmpressaPessoaJuridica())
         {
         }
     }
@@ -43,8 +41,8 @@ namespace WebForLink.Domain.Entities.Tipos
     /// </summary>
     public class FornecedorIndividual : Contratante
     {
-        public FornecedorIndividual(string razaoSocial)
-            : base(razaoSocial)
+        public FornecedorIndividual(string razaoSocial, TipoEmpresa tipoEmpresa)
+            : base(razaoSocial, tipoEmpresa)
         {
         }
     }
@@ -55,7 +53,7 @@ namespace WebForLink.Domain.Entities.Tipos
     public class FabricanteAncora : Contratante
     {
         public FabricanteAncora(string razaoSocial)
-            : base(razaoSocial)
+            : base(razaoSocial, new EmpressaPessoaJuridica())
         {
         }
     }

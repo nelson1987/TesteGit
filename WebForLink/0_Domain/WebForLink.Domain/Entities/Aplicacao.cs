@@ -30,9 +30,16 @@ namespace WebForLink.Domain.Entities
         {
             Usuarios.Add(usuario);
         }
-        public void AdicionarUsuario(string login,Contratante contratante)
+
+        public void AdicionarUsuario(string login, Contratante contratante)
         {
-            Usuarios.Add(new Usuario(login, this, contratante));
+            if (!UsuarioJaCadastrado(login))
+                Usuarios.Add(new Usuario(login, this, contratante));
+        }
+
+        private bool UsuarioJaCadastrado(string login)
+        {
+            return Usuarios.FirstOrDefault(x => x.Login == login) != null;
         }
 
         public void AdicionarPerfil(Perfil perfil)

@@ -53,6 +53,9 @@ namespace WebForLink.Win.Contexto
             modelBuilder.Configurations.Add(new AplicacaoMap());
             modelBuilder.Configurations.Add(new UsuarioMap());
             modelBuilder.Configurations.Add(new EmpresaMap());
+            modelBuilder.Configurations.Add(new ClienteMap());
+            modelBuilder.Configurations.Add(new FornededorMap());
+            modelBuilder.Configurations.Add(new FabricanteMap());
         }
     }
 }

@@ -1,24 +1,34 @@
-﻿namespace WebForLink.Domain.Entities
+﻿using System.Collections.Generic;
+
+namespace WebForLink.Domain.Entities
 {
     public class Passo
     {
-        protected Passo()
+        private Passo()
         {
+            Papeis = new List<Papel>();
         }
 
-        public Passo(string descricao)
+        public Passo(string descricao, params Papel[] papel)
             : this()
         {
             Descricao = descricao;
+            Papeis.AddRange(papel);
         }
 
         public int Id { get; private set; }
         public string Descricao { get; private set; }
         public bool Aprovado { get; private set; }
+        public List<Papel> Papeis { get; private set; }
 
-        public void SetAprovado(bool aprovado)
+        public void Aprovar()
         {
-            Aprovado = aprovado;
+            Aprovado = true;
+        }
+
+        public void Reprovar()
+        {
+            Aprovado = false;
         }
     }
 }

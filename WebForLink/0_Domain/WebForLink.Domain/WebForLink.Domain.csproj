@@ -83,6 +83,8 @@
     <Compile Include="Entities\Material.cs" />
     <Compile Include="Entities\Servico.cs" />
     <Compile Include="Entities\Usuario.cs" />
+    <Compile Include="Interfaces\IContratanteService.cs" />
+    <Compile Include="Services\ContratanteService.cs" />
     <Compile Include="Services\IncluirContratanteService.cs" />
     <Compile Include="ValueObject\Email.cs" />
     <Compile Include="ValueObject\UnidadeDaFederacao.cs" />

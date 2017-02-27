@@ -21,9 +21,9 @@ namespace WebForLink.Win.Banco
             //Property(t => t.Login).HasColumnName("Login");
 
             //Mapeamento de Herança
-            Map<Cliente>(m => m.Requires("Tipo").HasValue(1));
-            Map<Fornecedor>(m => m.Requires("Tipo").HasValue(2));
-            Map<Fabricante>(m => m.Requires("Tipo").HasValue(3));
+            //Map<Cliente>(m => m.Requires("Tipo").HasValue(1));
+            //Map<Fornecedor>(m => m.Requires("Tipo").HasValue(2));
+            //Map<Fabricante>(m => m.Requires("Tipo").HasValue(3));
         }
     }
 }

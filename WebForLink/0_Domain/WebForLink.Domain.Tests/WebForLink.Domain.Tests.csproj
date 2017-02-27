@@ -67,6 +67,9 @@
     <Compile Include="Entities\PerfilTests.cs" />
     <Compile Include="Entities\UsuarioTests.cs" />
     <Compile Include="Services\AplicacaoServiceTests.cs" />
+    <Compile Include="Services\EdicaoFluxoTests.cs">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\WebForLink.Domain\WebForLink.Domain.csproj">

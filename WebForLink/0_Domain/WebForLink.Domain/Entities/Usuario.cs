@@ -7,6 +7,7 @@ namespace WebForLink.Domain.Entities
         private Usuario()
         {
             Perfis = new List<Perfil>();
+            Papeis = new List<Papel>();
         }
 
         public Usuario(string login, Aplicacao aplicacao, Contratante contratante)
@@ -33,6 +34,11 @@ namespace WebForLink.Domain.Entities
         {
             if (Aplicacao.TemEssePerfil(administrador))
                 Perfis.Add(administrador);
+        }
+
+        public void AdicionarPapel(Papel papelDeSolicitante)
+        {
+            Papeis.Add(papelDeSolicitante);
         }
     }
 }

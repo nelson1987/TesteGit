@@ -25,5 +25,10 @@ namespace WebForLink.Domain
         {
             Passos.AddRange(passos);
         }
+
+        internal void SetAprovado(bool aprovado)
+        {
+            Aprovado = aprovado;
+        }
     }
 }
