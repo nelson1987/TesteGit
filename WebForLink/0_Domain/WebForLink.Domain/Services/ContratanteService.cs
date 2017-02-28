@@ -16,8 +16,7 @@ namespace WebForLink.Domain.Services
             _contratante = new ClienteAncora("Samarco");
         }
 
-        private Contratante _contratante { get; set; }
-
+        public Contratante _contratante { get; private set; }
         //public void IncluirCategoria(CategoriaEmpresa categoria)
         //{
         //    _contratante.AdicionarCategoria(categoria);
@@ -89,7 +88,6 @@ namespace WebForLink.Domain.Services
         {
             _contratante.IncluirImportacao(importacao);
         }
-
 
         public void IncluirSolicitacao(Solicitacao solicitacao)
         {

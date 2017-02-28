@@ -33,6 +33,12 @@ namespace WebForLink.Domain.Entities
         public List<PreCadastro> PreCadastros { get; private set; }
         public List<StatusPreCadastro> StatusPreCadastros { get; private set; }
         public List<StatusEmpresa> StatusEmpresas { get; private set; }
+        public List<Perfil> Perfis { get; private set; }
+        public List<Papel> Papeis { get; private set; }
+        public List<Documento> Documentos { get; private set; }
+        public List<CategoriaEmpresa> CategoriasCadastradas { get; private set; }
+        public List<Banco> Bancos { get; private set; }
+        public List<Importacao> Importacoes { get; private set; }
 
         public void AdicionarEmpresa(Empresa sorteq)
         {
@@ -54,50 +60,44 @@ namespace WebForLink.Domain.Entities
             Perfis.Add(perfil);
         }
 
-        public List<Perfil> Perfis { get; private set; }
-        public List<Papel> Papeis { get; private set; }
-
-        internal void AdicionarPapel(Papel papel)
+        public void AdicionarPapel(Papel papel)
         {
             Papeis.Add(papel);
         }
 
-        public List<Documento> Documentos { get; private set; }
-        internal void IncluirDocumento(Documento documento)
+        public void IncluirDocumento(Documento documento)
         {
             Documentos.Add(documento);
         }
 
-        internal void IncluirCliente(Cliente empresa)
+        public void IncluirCliente(Cliente empresa)
         {
             EmpresasCadastradas.Add(empresa);
         }
 
-        internal void IncluirFabricante(Fabricante empresa)
+        public void IncluirFabricante(Fabricante empresa)
         {
             EmpresasCadastradas.Add(empresa);
         }
 
-        public List<CategoriaEmpresa> CategoriasCadastradas { get; private set; }
-        internal void IncluirCategoria(CategoriaEmpresa categoria)
+        public void IncluirCategoria(CategoriaEmpresa categoria)
         {
             CategoriasCadastradas.Add(categoria);
         }
-        internal void AdicionarUsuario(Usuario usuario)
+
+        public void AdicionarUsuario(Usuario usuario)
         {
             Usuarios.Add(usuario);
         }
 
-        public List<Banco> Bancos { get; private set; }
-        internal void IncluirBanco(Banco banco)
+        public void IncluirBanco(Banco banco)
         {
             Bancos.Add(banco);
         }
 
-        public List<Importacao> Importacoes { get; private set; }
-        internal void IncluirImportacao(Importacao importacao)
+        public void IncluirImportacao(Importacao importacao)
         {
-            throw new System.NotImplementedException();
+            Importacoes.Add(importacao);
         }
     }
 }
