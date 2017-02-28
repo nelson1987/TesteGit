@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebForLink.Win", "1_Present
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebForLink.Web", "1_Presentation\WebForLink.Web\WebForLink.Web.csproj", "{29EC06BA-775E-4F28-9173-3E557F67395B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebForLink.Identity", "5_CrossCutting\WebForLink.Identity\WebForLink.Identity.csproj", "{D867A093-B694-4407-900C-D7229FB0CBA2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{29EC06BA-775E-4F28-9173-3E557F67395B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{29EC06BA-775E-4F28-9173-3E557F67395B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{29EC06BA-775E-4F28-9173-3E557F67395B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D867A093-B694-4407-900C-D7229FB0CBA2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D867A093-B694-4407-900C-D7229FB0CBA2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D867A093-B694-4407-900C-D7229FB0CBA2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D867A093-B694-4407-900C-D7229FB0CBA2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -48,5 +54,6 @@ Global
 		{BE8B457C-FA9D-4804-916E-2679FDE0A503} = {A3BE402A-FB62-4831-9929-2283FA0B7AC1}
 		{7591667F-48D4-41FE-8D28-160BA7F13153} = {932815E3-5529-466A-A6A5-4F462438ED60}
 		{29EC06BA-775E-4F28-9173-3E557F67395B} = {932815E3-5529-466A-A6A5-4F462438ED60}
+		{D867A093-B694-4407-900C-D7229FB0CBA2} = {85C3A7F6-676F-4FE9-8485-56A127AB9C2A}
 	EndGlobalSection
 EndGlobal
