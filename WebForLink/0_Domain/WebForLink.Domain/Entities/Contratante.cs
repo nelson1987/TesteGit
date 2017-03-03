@@ -30,7 +30,7 @@ namespace WebForLink.Domain.Entities
         public List<Empresa> EmpresasCadastradas { get; private set; }
         public List<Usuario> Usuarios { get; private set; }
         public List<Solicitacao> Solicitacoes { get; private set; }
-        public List<PreCadastro> PreCadastros { get; private set; }
+        //public List<PreCadastro> PreCadastros { get; private set; }
         public List<StatusPreCadastro> StatusPreCadastros { get; private set; }
         public List<StatusEmpresa> StatusEmpresas { get; private set; }
         public List<Perfil> Perfis { get; private set; }
